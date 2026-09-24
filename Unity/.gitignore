@@ -1,0 +1,14 @@
+# Généré par Unity à l'ouverture du projet
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+/Logs/
+/UserSettings/
+/MemoryCaptures/
+*.csproj
+*.sln
+*.slnx
+.vs/
+.idea/

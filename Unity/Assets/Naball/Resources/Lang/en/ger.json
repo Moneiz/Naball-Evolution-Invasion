@@ -1,0 +1,28 @@
+{
+ "entries": [
+  {
+   "key": "ger.Prison",
+   "value": "^^ The Terioriams prison"
+  },
+  {
+   "key": "ger.Beach",
+   "value": "The cosmological beach >>"
+  },
+  {
+   "key": "ger.Prairie",
+   "value": "The water land >>"
+  },
+  {
+   "key": "ger.Swp1",
+   "value": "The rocky swamp >>"
+  },
+  {
+   "key": "ger.Terio",
+   "value": "<< The magmatique flaw"
+  },
+  {
+   "key": "ger.Under",
+   "value": "<< The city of Terioriams"
+  }
+ ]
+}

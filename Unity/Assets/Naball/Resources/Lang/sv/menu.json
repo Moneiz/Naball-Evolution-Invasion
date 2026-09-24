@@ -1,0 +1,60 @@
+{
+ "entries": [
+  {
+   "key": "menu.Play",
+   "value": "Spela"
+  },
+  {
+   "key": "menu.Option",
+   "value": "Inställningar"
+  },
+  {
+   "key": "menu.Bonus",
+   "value": "Extras"
+  },
+  {
+   "key": "menu.Exit",
+   "value": "Sluta"
+  },
+  {
+   "key": "menu.New",
+   "value": "Start"
+  },
+  {
+   "key": "menu.Load",
+   "value": "Fortsätt"
+  },
+  {
+   "key": "menu.BackPlay",
+   "value": "Tillbaka"
+  },
+  {
+   "key": "menu.Credit",
+   "value": "Krediter"
+  },
+  {
+   "key": "menu.Web",
+   "value": "Webbsajt"
+  },
+  {
+   "key": "menu.Account",
+   "value": "Mitt konto"
+  },
+  {
+   "key": "menu.BackBonus",
+   "value": "Tillbaka"
+  },
+  {
+   "key": "menu.BlocChoice",
+   "value": "Välj spara blockera :"
+  },
+  {
+   "key": "menu.BackBloc",
+   "value": "Tillbaka"
+  },
+  {
+   "key": "menu.Version",
+   "value": "0.6.1 version"
+  }
+ ]
+}

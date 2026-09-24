@@ -1,0 +1,60 @@
+{
+ "entries": [
+  {
+   "key": "menu.Play",
+   "value": "لعب"
+  },
+  {
+   "key": "menu.Option",
+   "value": "إعدادات"
+  },
+  {
+   "key": "menu.Bonus",
+   "value": "إضافات"
+  },
+  {
+   "key": "menu.Exit",
+   "value": "استقال"
+  },
+  {
+   "key": "menu.New",
+   "value": "بداية"
+  },
+  {
+   "key": "menu.Load",
+   "value": "استئنف"
+  },
+  {
+   "key": "menu.BackPlay",
+   "value": "الى الخلف"
+  },
+  {
+   "key": "menu.Credit",
+   "value": "الاعتمادات"
+  },
+  {
+   "key": "menu.Web",
+   "value": "موقع الكتروني"
+  },
+  {
+   "key": "menu.Account",
+   "value": "حسابي"
+  },
+  {
+   "key": "menu.BackBonus",
+   "value": "الى الخلف"
+  },
+  {
+   "key": "menu.BlocChoice",
+   "value": "اختر حفظ كتلة :"
+  },
+  {
+   "key": "menu.BackBloc",
+   "value": "الى الخلف"
+  },
+  {
+   "key": "menu.Version",
+   "value": "0.6.1 نسخة"
+  }
+ ]
+}

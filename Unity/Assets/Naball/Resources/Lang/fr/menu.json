@@ -1,0 +1,64 @@
+{
+ "entries": [
+  {
+   "key": "menu.Play",
+   "value": "Jouer"
+  },
+  {
+   "key": "menu.Option",
+   "value": "Options"
+  },
+  {
+   "key": "menu.Bonus",
+   "value": "Extra"
+  },
+  {
+   "key": "menu.Exit",
+   "value": "Quitter"
+  },
+  {
+   "key": "menu.New",
+   "value": "Commencer"
+  },
+  {
+   "key": "menu.Load",
+   "value": "Reprendre"
+  },
+  {
+   "key": "menu.BackPlay",
+   "value": "Retour"
+  },
+  {
+   "key": "menu.Credit",
+   "value": "Credits"
+  },
+  {
+   "key": "menu.Web",
+   "value": "Site web"
+  },
+  {
+   "key": "menu.Account",
+   "value": "Mon compte"
+  },
+  {
+   "key": "menu.BackBonus",
+   "value": "Retour"
+  },
+  {
+   "key": "menu.BlocChoice",
+   "value": "Choissisez un bloc de sauvegarde :"
+  },
+  {
+   "key": "menu.BackBloc",
+   "value": "Retour"
+  },
+  {
+   "key": "menu.wait",
+   "value": "Veuillez patienter..."
+  },
+  {
+   "key": "menu.Version",
+   "value": "Version 0.6.6"
+  }
+ ]
+}

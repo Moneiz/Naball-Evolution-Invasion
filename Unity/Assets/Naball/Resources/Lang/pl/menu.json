@@ -1,0 +1,60 @@
+{
+ "entries": [
+  {
+   "key": "menu.Play",
+   "value": "Play"
+  },
+  {
+   "key": "menu.Option",
+   "value": "Settings"
+  },
+  {
+   "key": "menu.Bonus",
+   "value": "Extras"
+  },
+  {
+   "key": "menu.Exit",
+   "value": "Quit"
+  },
+  {
+   "key": "menu.New",
+   "value": "Start"
+  },
+  {
+   "key": "menu.Load",
+   "value": "Resume"
+  },
+  {
+   "key": "menu.BackPlay",
+   "value": "Back"
+  },
+  {
+   "key": "menu.Credit",
+   "value": "Credits"
+  },
+  {
+   "key": "menu.Web",
+   "value": "Website"
+  },
+  {
+   "key": "menu.Account",
+   "value": "My account"
+  },
+  {
+   "key": "menu.BackBonus",
+   "value": "Back"
+  },
+  {
+   "key": "menu.BlocChoice",
+   "value": "Choose a save block :"
+  },
+  {
+   "key": "menu.BackBloc",
+   "value": "Back"
+  },
+  {
+   "key": "menu.Version",
+   "value": "0.6.1 version"
+  }
+ ]
+}
