@@ -119,8 +119,7 @@ une nouvelle façon d'utiliser la bascule plutôt qu'une nouvelle façon de saut
 
 | Pouvoir | Chapitre | Effet |
 |---|---|---|
-| Alpha : courir | Prologue | course analogique |
-| Altopy : sauter | Prologue | saut à hauteur variable, accroche aux rebords |
+| Courir, sauter | dès le départ | course analogique, saut à hauteur variable, accroche aux rebords |
 | Fruits 4D | Prologue | la dimension change en mangeant un fruit |
 | Bascule libre | 1. Prairie | changer de dimension à volonté, contre de l'énergie |
 | Dash | 1. Prairie | au sol, puis une fois en l'air |
@@ -142,9 +141,26 @@ une nouvelle façon d'utiliser la bascule plutôt qu'une nouvelle façon de saut
 les utilise à son tour.
 
 **Règles communes** : chaque pouvoir coûte de l'énergie, la même jauge que la bascule, le dash et le tir.
-Les Atomiums restent la façon de les obtenir : la dalle magique du hub les révèle, comme dans l'original.
 Chaque pouvoir est enseigné dans une salle sûre de son chapitre, puis testé dans un défi du hub
 qui rapporte des Clims.
+
+### Comment Lumka obtient ses pouvoirs
+
+- **Courir et sauter ne se débloquent pas** : Lumka sait le faire dès la première seconde. Les pouvoirs
+  Alpha et Altopy de l'original disparaissent en tant que pouvoirs.
+- **Un Atomium par chapitre** : c'est un fragment de la dalle magique, tombé dans l'écho. Il est gardé au
+  cœur du niveau (une salle scellée, un Terioriam ancré, une machine de l'Empire), à mi-parcours.
+- **Le pouvoir marche tout de suite** : en le touchant, Lumka voit un souvenir des gardiens qui l'utilisaient,
+  et Helpi l'explique en deux phrases. La seconde moitié du chapitre est construite autour de ce pouvoir,
+  d'abord dans une salle sans danger, puis en vrai.
+- **La dalle du hub** : en revenant sur l'Île Cosmologique, Lumka pose l'Atomium sur la dalle. Ça fixe le
+  pouvoir, ouvre le portail suivant et fait changer l'île. La dalle donne aussi accès à un défi par pouvoir,
+  qui rapporte des Clims.
+- **Exceptions** : le premier fruit 4D se trouve dans la cellule du prologue, sans Atomium. La bascule libre
+  est le premier Atomium, à la fin de la Prairie. Le dash et l'Eta viennent des Arialiens libérés dans la
+  Prairie et le Marais, qui les enseignent à Lumka.
+- **Option, à valider** : dépenser des Clims bleus sur la dalle pour agrandir la jauge d'énergie ou
+  renforcer un pouvoir (Bulle plus grande, une Ancre de plus). Ça donne une raison concrète de tout ramasser.
 
 ## 5. Plan des niveaux pour 10 à 15 heures
 
