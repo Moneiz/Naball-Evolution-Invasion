@@ -1,7 +1,8 @@
 # Scénario et plan des niveaux — proposition
 
 Proposition du 29/09/2026 pour le remake avec Lumka. Décidé par Alan : Naball disparaît complètement,
-et la 4D est la boucle de gameplay principale, introduite dès le début. Elle garde tout ce que l'original
+la 4D est la boucle de gameplay principale, introduite dès le début, et le vol, le double saut et Solidify
+sont supprimés. Elle garde tout ce que l'original
 a posé (Opus Climus, Arial, Clims, Terioriams, Helpi, la dalle magique, les pouvoirs) et y branche les idées
 du prototype lumka-player (fruits 4D, dimensions, Somtraj, « les échos du chaos »).
 
@@ -64,8 +65,8 @@ selon cette valeur.
 | 2 | Prologue et Prairie | Fruits rouges et bleus posés dans le niveau ; chaque fruit impose sa dimension |
 | 3 | Fin de la Prairie | **Bascule libre** entre neutre et une dimension (bouton dédié), au prix d'énergie |
 | 4 | Marais rocheux | Bascule libre entre les trois : bleu, neutre, rouge |
-| 5 | Monts Célestes | **Bascule en l'air** sans coût supplémentaire, enchaînée au double saut et au dash |
-| 6 | Cité des Terioriams | **Ancres** : poser un objet pour qu'il garde sa dimension quand Lumka bascule |
+| 5 | Monts Célestes | **Bascule en l'air** sans coût supplémentaire, enchaînée au dash et au Lien |
+| 6 | Cité des Terioriams et Mines | **Ancre** puis **Eta de phase** : agir sur la dimension d'un seul objet |
 | 7 | Déserts | Dimensions extrêmes (−10 / +10) : effets plus forts, énergie plus chère |
 | 8 | Fin du jeu | Salles où la dimension change seule avec le temps, et boss qui bascule aussi |
 
@@ -106,23 +107,44 @@ Arial retrouve sa lumière. Le titre du prototype, *Light of Arial*, peut être 
 - **Clims bleus** : 200 au total (chiffre rond et affiché partout), dont 70 donnés par 7 Arialiens.
   Le prologue parle des Clims d'Arial en général, sans chiffre. Environ un tiers n'existe que dans une dimension.
 - **Clims rouges** : vie. **Clims blancs** : mécanismes des Terioriams, parfois piégés.
-- **Clims violets** : planer quelques secondes, comme dans l'original.
 - **Fruits 4D** : imposent une dimension ; plus tard, rechargent l'énergie de bascule.
 
 ## 4. Pouvoirs, dans l'ordre où Lumka les gagne
 
-| Pouvoir | Nom d'origine | Où | Effet |
+Pas de vol, pas de double saut, pas de Solidify. Le déplacement de base reste simple (course, saut à hauteur
+variable, dash, accroche aux rebords) et **chaque pouvoir gagné ensuite agit sur les dimensions** : il donne
+une nouvelle façon d'utiliser la bascule plutôt qu'une nouvelle façon de sauter plus haut.
+
+**Début de jeu** (prologue à chapitre 2) :
+
+| Pouvoir | Chapitre | Effet |
+|---|---|---|
+| Alpha : courir | Prologue | course analogique |
+| Altopy : sauter | Prologue | saut à hauteur variable, accroche aux rebords |
+| Fruits 4D | Prologue | la dimension change en mangeant un fruit |
+| Bascule libre | 1. Prairie | changer de dimension à volonté, contre de l'énergie |
+| Dash | 1. Prairie | au sol, puis une fois en l'air |
+| Eta : tir | 2. Marais | tir, cages, cibles |
+
+**Milieu de jeu** (chapitres 3 à 8), un pouvoir par chapitre :
+
+| Pouvoir | Chapitre | Effet | Ce qu'il ouvre comme situations |
 |---|---|---|---|
-| Se déplacer, courir | Alpha | Prison (prologue) | course analogique |
-| Sauter | Altopy | Prison (prologue) | saut à hauteur variable |
-| Fruits 4D | *prototype* | Prison (prologue) | la dimension change en mangeant un fruit |
-| Bascule libre | *nouveau* | Prairie des eaux | changer de dimension à volonté, contre de l'énergie |
-| Dash | *nouveau* | Prairie des eaux | dash au sol, puis en l'air |
-| Tir | Eta | Marais rocheux | tir, cages, cibles, renvoi des bombes |
-| Double saut | *nouveau* (ex-Fly) | Monts Célestes | salto en l'air, enchaînable avec une bascule |
-| Ancres | *nouveau* | Cité des Terioriams | figer un objet dans sa dimension |
-| Solidify | Solidify | Désert rocheux | devient une propriété du bleu : la lave y est roche. Le pouvoir permet de rester sur la lave figée en revenant au neutre, quelques secondes |
-| Mode combat | *prototype* | Désert rocheux | verrouillage sur un ennemi (Ctrl) |
+| **Lien** | 3. Monts Célestes | Un fil de lumière qui tire Lumka vers un point d'accroche (fleurs d'Arial). Les points n'existent que dans une dimension. | Traversées verticales : basculer en plein saut pour faire apparaître le point suivant, puis s'y lier. Remplace le vol pour franchir les grands vides. |
+| **Ancre** | 4. Cité des Terioriams | Poser une ancre sur un objet : il garde sa dimension quand Lumka bascule (3 ancres au plus). | Garder un pont bleu en rouge ; bloquer une porte ouverte ; empêcher une patrouille de basculer avec le monde. |
+| **Eta de phase** | 5. Mines | Le tir Eta envoie la cible dans l'autre dimension, sans faire basculer le reste. | Désarmer un Somtraj en l'exilant ; faire apparaître une seule plateforme ; renvoyer les bombes des vaisseaux dans une dimension où elles ne touchent rien. |
+| **Écho** | 6. Désert rocheux | Laisser une copie immobile de Lumka dans la dimension actuelle. Elle reste sur une dalle, sert d'appât ou de cible pour le Lien. | Énigmes à deux corps : l'écho tient la dalle en bleu pendant que Lumka avance en rouge. Leurres pour les patrouilles. |
+| **Bulle** | 7. Désert de lave | Une sphère d'environ 5 m, centrée sur Lumka, où règne l'autre dimension pendant quelques secondes. | La lave reste roche seulement dans la bulle : avancer vite sans la perdre. Traverser un mur en ne basculant que ce qui est autour de soi. |
+| **Déphasage** | 8. Forêt des échos | Lumka seule passe entre deux dimensions une seconde : intouchable, elle traverse ce qui n'existe que d'un côté. | Esquiver les attaques et les vagues de la Forêt ; franchir une grille au dernier moment ; clé du combat contre l'Empereur. |
+
+**Fin de jeu** (chapitres 9 à 11) : pas de nouveau pouvoir. Les salles demandent de les combiner
+(Écho posé sur une dalle, Ancre sur un pont, Bulle pour traverser, Lien pour sortir), et l'Empereur
+les utilise à son tour.
+
+**Règles communes** : chaque pouvoir coûte de l'énergie, la même jauge que la bascule, le dash et le tir.
+Les Atomiums restent la façon de les obtenir : la dalle magique du hub les révèle, comme dans l'original.
+Chaque pouvoir est enseigné dans une salle sûre de son chapitre, puis testé dans un défi du hub
+qui rapporte des Clims.
 
 ## 5. Plan des niveaux pour 10 à 15 heures
 
@@ -137,12 +159,12 @@ dans le builder, sans remodéliser le décor.
 | — | Hub : l'Île Cosmologique | Ger_FieldSwamp | Existant, porté | Portails visibles seulement dans certaines dimensions ; l'île se recompose à chaque monde recousu | 1 h au total |
 | 1 | La Prairie des eaux | Prairie_of_the waters | Existant | Ruisseaux gelés en bleu, courants en rouge ; bascule libre et dash | 1 h |
 | 2 | Le Marais rocheux | Swamp_intro + Swamp_bug | Existant ×2, à relier | Nénuphars qui poussent en rouge ; trois dimensions ; Eta ; premier boss (un Terioriam ancré) | 1 h 15 |
-| 3 | Les Monts Célestes | Mountain_high | Existant, à terminer | Météo selon la dimension, bascule en l'air, double saut | 1 h |
-| 4 | La Cité des Terioriams | Underground | Existant, à refaire à la main | Infiltration : patrouilles qui ne voient qu'une dimension ; ancres ; Somtraj | 1 h 15 |
-| 5 | Les Mines | Chariot_mine + Chariot_mine2 | Existant | Fuite en wagonnet : basculer pour faire apparaître les rails | 30 min |
-| 6 | Le Désert rocheux | Rock_desert | Existant | Solidify, mode combat, vaisseaux dont les bombes changent de dimension | 1 h |
-| 7 | Le Désert de lave | Desert_lava | Existant, à terminer | Dimensions extrêmes, lave et roche en alternance | 1 h |
-| 8 | La Forêt des échos | *nouveau* | Nouveau | La dimension change seule par vagues ; énigmes de timing | 1 h |
+| 3 | Les Monts Célestes | Mountain_high | Existant, à terminer | Météo selon la dimension, bascule en l'air, Lien | 1 h |
+| 4 | La Cité des Terioriams | Underground | Existant, à refaire à la main | Infiltration : patrouilles qui ne voient qu'une dimension ; Ancre ; Somtraj | 1 h 15 |
+| 5 | Les Mines | Chariot_mine + Chariot_mine2 | Existant | Fuite en wagonnet : basculer pour faire apparaître les rails ; Eta de phase | 30 min |
+| 6 | Le Désert rocheux | Rock_desert | Existant | Écho, mode combat, vaisseaux dont on renvoie les bombes | 1 h |
+| 7 | Le Désert de lave | Desert_lava | Existant, à terminer | Dimensions extrêmes, lave et roche en alternance ; Bulle | 1 h |
+| 8 | La Forêt des échos | *nouveau* | Nouveau | La dimension change seule par vagues ; énigmes de timing ; Déphasage | 1 h |
 | 9 | Retour à la Prison | Prison of the Terioriams (2e moitié) | Existant, à scinder | La prison revisitée avec tous les pouvoirs : libérer les derniers Arialiens | 50 min |
 | 10 | Arial en ruines | *nouveau* (île, maisons, pont du prototype) | Nouveau, base existante | Les dimensions presque recousues se superposent | 1 h |
 | 11 | La Citadelle impériale | *nouveau* | Nouveau | Ascension, puis l'Empereur qui bascule avec Lumka | 1 h |
@@ -168,7 +190,8 @@ scellé (incohérence 3).
   d'écran sans passer par URP. Puis une salle de test dans le hub pour régler les sensations.
 - Retirer Naball : la boule, son menu de construction et les dialogues qui la nomment.
 - Réécrire les dialogues de `Assets/lang` pour Lumka, la 4D et les nouvelles commandes.
-- Rendre le vol au Clim violet ; le double saut devient un pouvoir gagné (Monts Célestes).
+- Retirer le double saut de `LumkaController` et les Clims violets ; ajouter l'accroche aux rebords.
+- Pouvoirs de milieu de jeu à prototyper dans la salle de test, dans l'ordre : Ancre, Eta de phase, Bulle, Écho, Lien, Déphasage.
 - Scinder la Prison en prologue et chapitre 9 ; relier Swamp_intro et Swamp_bug ; terminer Mountain_high et Desert_lava.
 - Refaire Underground à la main en cité (son `WorldGenerator` n'a pas d'équivalent Unity).
 - Nouveaux besoins de modélisation : la Forêt des échos, Arial en ruines (partir de la scène `Test_arial`
@@ -176,6 +199,4 @@ scellé (incohérence 3).
 
 ## Décisions attendues d'Alan
 
-1. Le vol : Clim violet comme dans l'original, et double saut en pouvoir gagné plus tard (recommandé) ?
-2. Solidify fondu dans la 4D (la lave est roche en bleu) plutôt que pouvoir séparé (recommandé) ?
-3. L'ordre des chapitres du tableau 5, en particulier les Monts Célestes avant la Cité ?
+1. La liste des pouvoirs de milieu de jeu (section 4) : lesquels garder, lesquels remplacer ?
