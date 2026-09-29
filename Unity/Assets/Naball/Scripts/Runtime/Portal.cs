@@ -38,7 +38,7 @@ namespace Naball
 
         void Touch(Collider other)
         {
-            if (busy || other.GetComponentInParent<NaballController>() == null)
+            if (busy || !PlayerCharacter.Owns(other))
                 return;
             if (!IsActive)
             {
@@ -47,10 +47,10 @@ namespace Naball
                 lastRefusal = Time.time;
                 return;
             }
-            StartCoroutine(Travel(other.GetComponentInParent<NaballController>()));
+            StartCoroutine(Travel(other.GetComponentInParent<PlayerCharacter>()));
         }
 
-        IEnumerator Travel(NaballController player)
+        IEnumerator Travel(PlayerCharacter player)
         {
             busy = true;
             GameState.Save();

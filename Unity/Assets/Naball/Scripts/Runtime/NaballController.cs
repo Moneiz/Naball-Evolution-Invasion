@@ -7,7 +7,7 @@ namespace Naball
     /// de dloc par tick (60 ticks/s) et le tournait de drot par tick. Les vitesses ci-dessous en découlent.
     /// </summary>
     [RequireComponent(typeof(Rigidbody))]
-    public class NaballController : MonoBehaviour
+    public class NaballController : PlayerCharacter
     {
         [Header("Déplacement (Motion : dloc -0.1 / -0.25, drot 0.0524 par tick)")]
         public float walkSpeed = 6f;
@@ -20,11 +20,7 @@ namespace Naball
         public float flyUpSpeed = 6f;
         public float flyDuration = 2f;
 
-        [Header("Chute hors du monde (Ger.NaballBack)")]
-        public float fallLimit = -60f;
-
         public Animation skin;       // Armature.003 : ArmatureAction.004 découpée en clips
-        public Transform respawnPoint;
 
         Rigidbody body;
         float flyTime;
@@ -115,15 +111,6 @@ namespace Naball
                 return;
             if (clip == "Jump" || !skin.IsPlaying("Jump"))
                 skin.CrossFade(clip, 0.1f);
-        }
-
-        public void Respawn()
-        {
-            if (respawnPoint == null)
-                return;
-            body.linearVelocity = Vector3.zero;
-            body.position = respawnPoint.position;
-            transform.position = respawnPoint.position;
         }
     }
 }

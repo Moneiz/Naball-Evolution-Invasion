@@ -1,8 +1,9 @@
 # Naball sous Unity : tranche verticale Ger_FieldSwamp
 
 Ce dossier est un projet Unity 6 qui reprend le hub du jeu, **Ger_FieldSwamp** (l'Île Cosmologique),
-à partir du `.blend` original. La boule se déplace comme dans le BGE, les 20 Clims se ramassent et
-sont sauvegardés, les 6 portails respectent l'avancement, les zones musicales et les dialogues fonctionnent.
+à partir du `.blend` original, avec **Lumka** comme héros (le personnage du prototype
+[lumka-player](https://gitlab.com/piwel-lumka/lumka-player)). Les 20 Clims se ramassent et sont sauvegardés,
+les 6 portails respectent l'avancement, les zones musicales et les dialogues fonctionnent.
 
 ![Le niveau exporté, rendu dans Blender avec les matériaux reconstruits](Docs/apercu_export_ger.png)
 
@@ -10,32 +11,57 @@ sont sauvegardés, les 6 portails respectent l'avancement, les zones musicales e
 
 1. Unity Hub › *Add project from disk* › choisir ce dossier `Unity/` (Unity 6000.0 LTS).
 2. À la première ouverture, le script `LevelBuilder` construit tout seul `Assets/Naball/Scenes/Ger_FieldSwamp.unity`
-   (matériaux, prefabs de la boule et du Clim, colliders, sons, portails). On peut le relancer via le menu
-   **Naball › Construire Ger_FieldSwamp**.
-3. Ouvrir la scène et appuyer sur Play. La boule tombe du ciel sur l'île, comme au premier passage dans l'original.
+   (matériaux, prefabs de Lumka et du Clim, Animator de Lumka, colliders, sons, portails). On peut le relancer via le menu
+   **Naball › Construire Ger_FieldSwamp**. Si la scène existait déjà avec la boule, ce menu la reconstruit avec Lumka.
+   **Naball › Construire Ger_FieldSwamp avec la boule d'origine** remet la boule du jeu Blender, pour comparer.
+3. Ouvrir la scène et appuyer sur Play. Lumka tombe du ciel sur l'île, comme la boule au premier passage dans l'original.
+   Un clic dans la fenêtre de jeu capture la souris pour la caméra, Échap la libère.
 
 La console affiche la conversion d'axes Blender → Unity que le builder a vérifiée sur les objets du niveau.
 Un avertissement à cet endroit signifie que les points d'apparition risquent d'être décalés.
 
 ## Commandes
 
-| Touche | Action | Logic brick d'origine |
+| Clavier (AZERTY ou QWERTY) | Manette | Action |
 |---|---|---|
-| ↑ / W | avancer | Motion `dloc -0.1` par tick |
-| ← → / A D | tourner | Motion `drot ±0.0524` par tick |
-| Maj | sprint (pouvoir *Move*) | Motion `dloc -0.25` |
-| Espace | sauter (pouvoir *Jump*), puis planer 2 s (pouvoir *Fly*) | Motion `dloc z 0.16`, propriété `Flying` |
-| Q / E | tourner la caméra | touches A / Z de `Ger.cam` |
-| Entrée | dialogue suivant | DialogsEngine 1.05 |
-| F5 / F6 | avancement du hub −1 / +1 (éditeur uniquement) | `alr` de `ger.gs` |
-| F9 | repartir d'une sauvegarde vierge (éditeur uniquement) | |
+| ZQSD, WASD ou flèches | stick gauche (analogique) | courir, dans la direction de la caméra |
+| Espace (maintenir = plus haut) | A | sauter ; en l'air, second saut en salto (pouvoir *Fly*) |
+| Maj | B ou RB | dash, au sol ou une fois en l'air (¼ de la jauge d'énergie) |
+| clic gauche | X | tir vers là où regarde la caméra (1/10 de la jauge) |
+| souris | stick droit (si l'axe `RightStickX/Y` existe) | caméra |
+| Entrée, Espace ou clic | | dialogue suivant |
+| F5 / F6 | | avancement du hub −1 / +1 (éditeur uniquement) |
+| F9 | | repartir d'une sauvegarde vierge (éditeur uniquement) |
+
+La jauge d'énergie (en haut à gauche, sous les Clims) remonte seule après une courte pause et clignote en rouge
+quand elle ne suffit pas.
+
+## Lumka : ce qui change par rapport au prototype
+
+`LumkaController` remplace celui du prototype (`Assets/Scripts/characters/lumka/LumkaController.cs` dans lumka-player)
+en gardant ses idées (saut variable, dash et tir sur une jauge d'énergie) :
+
+| Prototype 2021 | Ici |
+|---|---|
+| Déplacement par `transform.Translate` : traverse les murs fins, ignore les pentes | Vitesse du Rigidbody, qui suit la pente du sol et glisse le long des murs |
+| 8 directions, vitesse tout ou rien, demi-tour instantané | Direction analogique (manette), accélération, freinage et virage progressifs |
+| Saut seulement si le rayon d'1 m touche le sol à l'instant de l'appui | *Coyote time* (0,12 s après un rebord) et appui mémorisé 0,15 s avant l'atterrissage |
+| Clavier AZERTY uniquement, pas de manette | AZERTY, QWERTY et manette |
+| Caméra qui suit sans commande | Caméra orbitale à la souris, recentrage automatique, évite de traverser les murs |
+| Animator dont les états modifiaient le contrôleur (`LumkaSprint`, `LumkaShoot`) | Animator généré, piloté par six paramètres ; le tir n'anime que le haut du corps |
+
+Le modèle, les animations, les textures et les sons viennent tels quels du prototype (`Assets/Lumka`, avec leurs `.meta`).
+Les matériaux, qui utilisaient un shader graph URP très simple (texture + émission), sont recréés en Standard par
+`LumkaBuilder`, ce qui évite de passer le projet sous URP pour l'instant.
+Pas encore repris : le mode combat (Ctrl), les fruits 4D et les dimensions, le Somtraj, l'accroche aux rebords
+(les animations `grimpe_rebord` et `supendu` sont dans le FBX).
 
 ## Ce qui est porté
 
 | Original | Unity |
 |---|---|
-| Objet `Cube` et ses 44 logic bricks | `NaballController` (Rigidbody, vitesses converties à 60 ticks/s) |
-| Actuator Camera de `Ger.cam` | `FollowCamera` (hauteur 5, distance 15 à 20, amortissement 0.031) |
+| Objet `Cube` et ses 44 logic bricks | `LumkaController` ; la boule reste disponible (`NaballController`, vitesses converties à 60 ticks/s) |
+| Actuator Camera de `Ger.cam` | `FollowCamera` (caméra orbitale) |
 | `ger.clim1..20` + `Clim_white` (Steering, message `Add` au HUD) | `ClimSpawner`, `ClimPickup` |
 | `Ger.portal.*` (Collision + `alr > n`, écran Load_lvl) | `Portal` ; les niveaux pas encore portés affichent un message |
 | `AudiViews.GerMod` | `SoundField` (volume = 1 − distance / rayon) |

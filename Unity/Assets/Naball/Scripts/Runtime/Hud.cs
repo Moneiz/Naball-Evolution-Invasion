@@ -16,7 +16,8 @@ namespace Naball
         public AudioClip climSound;
 
         Text climCounter, message;
-        Image loading;
+        Image loading, energyBack, energyFill;
+        float energyFlashUntil;
         AudioSource audioSource;
         Coroutine messageRoutine;
 
@@ -33,6 +34,16 @@ namespace Naball
             message = Ui.Label("Message", canvas, 28, TextAnchor.MiddleCenter,
                 new Vector2(0.1f, 0.75f), new Vector2(0.9f, 0.85f));
             message.color = new Color(1f, 0.85f, 0.3f);
+
+            // Jauge d'énergie de Lumka (dash et tir), cachée tant que le personnage n'en a pas.
+            energyBack = Ui.Panel("Energie", canvas, new Vector2(0, 1), new Vector2(0, 1), new Color(0f, 0f, 0f, 0.5f),
+                new Vector2(24, -92), new Vector2(264, -76));
+            energyFill = Ui.Panel("Niveau", energyBack.transform, Vector2.zero, Vector2.one, EnergyColor,
+                new Vector2(2, 2), new Vector2(-2, -2));
+            energyFill.type = Image.Type.Filled;
+            energyFill.sprite = Sprite.Create(Texture2D.whiteTexture, new Rect(0, 0, 4, 4), Vector2.one * 0.5f);
+            energyFill.fillMethod = Image.FillMethod.Horizontal;
+            energyBack.gameObject.SetActive(false);
 
             loading = Ui.Panel("Chargement", canvas, Vector2.zero, Vector2.one, Color.white);
             loading.preserveAspect = false;
@@ -51,6 +62,25 @@ namespace Naball
             if (Instance == this)
                 Instance = null;
         }
+
+        static readonly Color EnergyColor = new Color(0.45f, 0.85f, 1f);
+
+        void Update()
+        {
+            if (energyFill != null)
+                energyFill.color = Time.unscaledTime < energyFlashUntil && Mathf.Repeat(Time.unscaledTime * 8f, 1f) < 0.5f
+                    ? new Color(1f, 0.3f, 0.3f)
+                    : EnergyColor;
+        }
+
+        public void SetEnergy(float value)
+        {
+            energyBack.gameObject.SetActive(true);
+            energyFill.fillAmount = Mathf.Clamp01(value);
+        }
+
+        /// <summary>Clignote en rouge : pas assez d'énergie pour l'action demandée.</summary>
+        public void FlashEnergy() => energyFlashUntil = Time.unscaledTime + 0.5f;
 
         void Refresh() => climCounter.text = $"Clims  {GameState.Data.nbClim}/{GameState.ClimTotal}";
 

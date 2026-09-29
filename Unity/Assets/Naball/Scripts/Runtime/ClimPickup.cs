@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Naball
 {
     /// <summary>
-    /// Le Clim blanc : tourne sur lui-même, file vers la boule quand elle est proche (actuator Steering)
+    /// Le Clim blanc : tourne sur lui-même, file vers le joueur quand elle est proche (actuator Steering)
     /// et s'ajoute au compteur au contact.
     /// </summary>
     public class ClimPickup : MonoBehaviour
@@ -12,22 +12,19 @@ namespace Naball
         public float magnetRadius = 9f;
         public float magnetSpeed = 20f;
 
-        static NaballController player;
-
-        void Update()
+                void Update()
         {
-            if (player == null)
-                player = FindAnyObjectByType<NaballController>();
+            var player = PlayerCharacter.Current;
             if (player == null || magnetSpeed <= 0f)
                 return;
-            var target = player.transform.position;
+            var target = player.Center;
             if ((target - transform.position).sqrMagnitude <= magnetRadius * magnetRadius)
                 transform.position = Vector3.MoveTowards(transform.position, target, magnetSpeed * Time.deltaTime);
         }
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponentInParent<NaballController>() == null)
+            if (!PlayerCharacter.Owns(other))
                 return;
             GameState.CollectClim(climId);
             if (Hud.Instance != null)

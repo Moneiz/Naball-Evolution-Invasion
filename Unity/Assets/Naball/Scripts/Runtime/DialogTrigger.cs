@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Naball
 {
-    /// <summary>Dialogue lancé quand la boule touche l'objet (DlgInvocation.RegDlg sur un sensor Collision).</summary>
+    /// <summary>Dialogue lancé quand le joueur touche l'objet (DlgInvocation.RegDlg sur un sensor Collision).</summary>
     public class DialogTrigger : MonoBehaviour
     {
         public string dialog;
@@ -12,7 +12,7 @@ namespace Naball
 
         void Touch(Collider other)
         {
-            if (other.GetComponentInParent<NaballController>() != null)
+            if (PlayerCharacter.Owns(other))
                 DialogSystem.Play(dialog);
         }
     }

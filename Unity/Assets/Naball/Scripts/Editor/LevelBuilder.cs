@@ -32,7 +32,11 @@ namespace Naball.EditorTools
         [MenuItem("Naball/Construire Ger_FieldSwamp")]
         static void BuildGer() => Build(LevelName);
 
-        public static void Build(string levelName)
+        [MenuItem("Naball/Construire Ger_FieldSwamp avec la boule d'origine")]
+        static void BuildGerWithBall() => Build(LevelName, lumka: false);
+
+        /// <param name="lumka">Lumka (le héros du remake) ou la boule du jeu Blender, pour comparer.</param>
+        public static void Build(string levelName, bool lumka = true)
         {
             var level = JsonUtility.FromJson<LevelJson>(File.ReadAllText($"{Root}Data/{levelName}.level.json"));
 
@@ -75,8 +79,8 @@ namespace Naball.EditorTools
             }
 
             // Joueur, caméra, lumière, systèmes
-            var playerPrefab = BuildPlayerPrefab();
-            var player = ((GameObject)PrefabUtility.InstantiatePrefab(playerPrefab)).GetComponent<NaballController>();
+            var playerPrefab = lumka ? LumkaBuilder.BuildPrefab() : BuildBallPrefab();
+            var player = ((GameObject)PrefabUtility.InstantiatePrefab(playerPrefab)).GetComponent<PlayerCharacter>();
 
             var cameraGo = new GameObject("Camera", typeof(Camera), typeof(AudioListener), typeof(FollowCamera));
             cameraGo.tag = "MainCamera";
@@ -86,6 +90,14 @@ namespace Naball.EditorTools
             camera.backgroundColor = Color.black;
             var follow = cameraGo.GetComponent<FollowCamera>();
             follow.target = player.transform;
+            if (player is LumkaController lumkaController)
+                lumkaController.cameraTransform = cameraGo.transform;
+            else
+            {
+                // La boule faisait 2 m et la caméra BGE restait à 15 m : on garde ce recul.
+                follow.distance = 15f;
+                follow.lookHeight = 1f;
+            }
 
             var sunGo = new GameObject("Soleil", typeof(Light));
             var sun = sunGo.GetComponent<Light>();
@@ -233,7 +245,7 @@ namespace Naball.EditorTools
         }
 
         /// <summary>La boule : collision en boîte (Cube, invisible), peau animée, contrôleur.</summary>
-        static GameObject BuildPlayerPrefab()
+        static GameObject BuildBallPrefab()
         {
             var go = Instantiate("Naball");
             go.name = "Naball";

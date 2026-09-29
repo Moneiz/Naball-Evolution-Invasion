@@ -7,7 +7,7 @@ namespace Naball
 {
     /// <summary>
     /// Mise en place du hub selon l'avancement (Maps/Ger.py + gameInstance/Cont/ger.sii) :
-    /// point d'apparition de la boule, position de la caméra, dialogue d'accueil et lumière.
+    /// point d'apparition du joueur, position de la caméra, dialogue d'accueil et lumière.
     /// </summary>
     public class LevelDirector : MonoBehaviour
     {
@@ -22,7 +22,7 @@ namespace Naball
             public float sunIntensity = -1f;
         }
 
-        public NaballController player;
+        public PlayerCharacter player;
         public FollowCamera followCamera;
         public Light sun;
         [Tooltip("Sol principal (Ger.normal) : son dialogue change avec l'avancement.")]
@@ -40,7 +40,7 @@ namespace Naball
                 player.transform.SetPositionAndRotation(state.playerSpawn.position, state.playerSpawn.rotation);
             }
             if (state.cameraStart != null)
-                followCamera.transform.position = state.cameraStart.position;
+                followCamera.LookFrom(state.cameraStart.position);
             else
                 followCamera.Snap();
             if (welcomeTrigger != null)
