@@ -1,6 +1,7 @@
 # Scénario et plan des niveaux — proposition
 
-Proposition du 29/09/2026 pour le remake avec Lumka, à valider par Alan. Elle garde tout ce que l'original
+Proposition du 29/09/2026 pour le remake avec Lumka. Décidé par Alan : Naball disparaît complètement,
+et la 4D est la boucle de gameplay principale, introduite dès le début. Elle garde tout ce que l'original
 a posé (Opus Climus, Arial, Clims, Terioriams, Helpi, la dalle magique, les pouvoirs) et y branche les idées
 du prototype lumka-player (fruits 4D, dimensions, Somtraj, « les échos du chaos »).
 
@@ -24,9 +25,51 @@ aux dimensions » qui donne les pouvoirs grâce aux Atomiums, le hub qui ouvre l
 | 6 | Le jeu commence dans la Prison des Terioriams (cinématique, puis la dalle et le pouvoir Alpha), et la même scène sert aussi à la fin (« And Then and Then » → Chariot_mine2 → Final_game). La Prison est à la fois le premier et le dernier niveau, sans que l'histoire explique le retour. | `Animation_ennemie1`, `Prison of the Terioriams` |
 | 7 | La fin avoue que « l'univers de Naball n'est pas terminé » et renvoie vers un niveau bonus : il n'y a pas de dénouement. | `final` |
 | 8 | Le vol vient d'un Clim violet (2 s), alors que le remake en fait un double saut permanent. | `#06x01`, `LumkaController` |
+| 10 | La dalle est « reliée aux dimensions », mais aucune mécanique de l'original n'exploite les dimensions. | `#01x01` |
 | 9 | Tous les dialogues s'adressent à Naball, et les commandes citées (flèches, touche C, A/Z pour la caméra) ne sont plus les bonnes. | `Assets/lang` |
 
-## 2. Le nouveau scénario
+## 2. La boucle de jeu : la 4D
+
+Tout le jeu tourne autour d'une idée : **le monde existe en plusieurs dimensions superposées, et Lumka
+passe de l'une à l'autre**. Le prototype l'avait posée avec les fruits 4D : une valeur de dimension de −10
+(bleu) à +10 (rouge), et des objets dont la position, la rotation et la visibilité suivent une courbe
+selon cette valeur.
+
+**La boucle, à chaque salle** :
+1. **Observer** : la teinte de l'écran et un écho visuel (silhouettes translucides) montrent ce qui
+   existe dans les autres dimensions.
+2. **Basculer** : Lumka change de dimension (fruit 4D, puis à volonté quand le pouvoir est acquis).
+3. **Le monde se recompose** : ponts qui s'alignent, plateformes qui montent, murs qui disparaissent,
+   eau qui devient glace, lave qui devient roche, ennemis qui apparaissent ou s'évanouissent.
+4. **Traverser**, souvent en rebasculant en plein saut ou pendant la recomposition.
+5. **Récompense** : les Clims bleus les mieux cachés n'existent que dans une dimension.
+
+**Ce qui rend la mécanique riche au lieu d'être un simple interrupteur** :
+- **La bascule prend du temps** (environ une demi-seconde) : la dimension glisse de sa valeur actuelle
+  à la nouvelle, et les objets suivent leur courbe. Une plateforme qui monte pendant la bascule porte Lumka ;
+  un mur qui se referme peut l'écraser. Ça crée des énigmes de timing, pas seulement de logique.
+- **Les dimensions ont chacune leur règle** : le bleu (−) fige et refroidit (eau gelée, lave en roche,
+  ennemis ralentis) ; le rouge (+) accélère et réchauffe (courants, geysers, plantes qui poussent) ;
+  le neutre (0) est le monde normal. Chaque niveau exploite ces règles avec ses propres objets.
+- **Les ennemis vivent dans une dimension** : un Somtraj rouge ne voit pas Lumka en bleu ; un Terioriam
+  « ancré » reste présent partout et doit être vaincu. Le combat devient du placement entre dimensions.
+- **L'énergie** (la jauge du dash et du tir) paie aussi les bascules libres, ce qui empêche de basculer
+  sans arrêt et relie les trois actions.
+
+**Progression de la mécanique** :
+
+| Étape | Où | Ce que Lumka peut faire |
+|---|---|---|
+| 1 | Prologue (5 premières minutes) | Un fruit 4D bleu fixe : le manger fait basculer, les barreaux de la cellule n'existent qu'en neutre |
+| 2 | Prologue et Prairie | Fruits rouges et bleus posés dans le niveau ; chaque fruit impose sa dimension |
+| 3 | Fin de la Prairie | **Bascule libre** entre neutre et une dimension (bouton dédié), au prix d'énergie |
+| 4 | Marais rocheux | Bascule libre entre les trois : bleu, neutre, rouge |
+| 5 | Monts Célestes | **Bascule en l'air** sans coût supplémentaire, enchaînée au double saut et au dash |
+| 6 | Cité des Terioriams | **Ancres** : poser un objet pour qu'il garde sa dimension quand Lumka bascule |
+| 7 | Déserts | Dimensions extrêmes (−10 / +10) : effets plus forts, énergie plus chère |
+| 8 | Fin du jeu | Salles où la dimension change seule avec le temps, et boss qui bascule aussi |
+
+## 3. Le nouveau scénario
 
 **Titre de travail** : *Lumka — Les Échos du Chaos*.
 
@@ -36,102 +79,103 @@ d'Arial, qui se disperse en Clims à travers l'Univers. Les Arialiens tombent au
 
 **Ce que le remake ajoute** : l'explosion n'a pas seulement dispersé les Clims, elle a **fendu Arial entre
 les dimensions**. Chaque monde du jeu est un *écho* d'Arial dans une autre dimension (une prairie, un marais,
-un désert, une montagne), déformé par le chaos. C'est ce qui relie la dalle « reliée aux dimensions » de
-l'original aux fruits 4D du prototype, et c'est ce que dit le titre.
+un désert, une montagne), déformé par le chaos. Les fruits 4D poussent là où la fracture est la plus fine :
+ce sont des morceaux d'Arial qui ont gardé la mémoire de toutes ses dimensions. C'est ce que dit le titre,
+et c'est pourquoi la mécanique est au centre du récit.
 
-**Lumka** est une jeune gardienne d'Arial. Les gardiens protégeaient l'énergie de la planète ; Lumka est la
-seule qui reste libre. Elle se réveille en cellule dans la Prison des Terioriams, sans pouvoirs, et Helpi
-lui parle en pensée.
-
-**Et Naball ?** Deux options, à choisir :
-- **A (recommandée)** : Naball était l'ancien gardien d'Arial, un esprit en forme de sphère, dissous dans
-  l'explosion. Ses fragments sont les Atomiums ; chaque pouvoir que Lumka gagne est un morceau de Naball.
-  « Naball Evolution » prend un sens : Lumka est ce que Naball devient. La boule peut réapparaître en
-  souvenir ou en esprit dans les cinématiques.
-- **B** : Naball disparaît du récit et ne reste que dans le titre de la série.
+**Lumka** est une jeune gardienne d'Arial, la seule restée libre. Elle se réveille en cellule dans la
+Prison des Terioriams. En mangeant un fruit 4D tombé par une fissure, elle découvre qu'elle peut passer
+d'une dimension à l'autre, ce que les Terioriams ne savent pas faire : c'est son avantage sur l'Empire.
+Helpi, un Arialien prisonnier, lui parle en pensée et la guide.
 
 **L'Empire des Terioriams** se nourrit du chaos : plus Arial reste fracturée, plus il est puissant.
 Ses soldats sont les Terioriams (déjà modélisés), ses tourelles les Somtraj (prototype), ses vaisseaux
-ceux de Rock_desert. Il lui faut un chef, l'**Empereur Terioriam** (nom à trouver), qui veut garder les
-dimensions séparées pour régner sur tous les échos à la fois.
+ceux de Rock_desert. Son chef, l'**Empereur Terioriam** (nom à trouver), veut garder les dimensions
+séparées pour régner sur tous les échos à la fois. Il cherche à capturer Lumka pour s'emparer de son don.
 
 **Le but** : ramasser les Clims bleus pour rendre sa lumière à Arial, libérer les Arialiens et réunir les
-Atomiums pour recomposer les pouvoirs des gardiens. Chaque monde terminé « recoud » un écho à Arial : le hub
-change (lumière, végétation, Arialiens libérés qui s'y installent), ce que l'original faisait déjà avec
-l'éclairage de Ger selon l'avancement.
+Atomiums, qui rendent à Lumka les pouvoirs des gardiens. Chaque monde terminé « recoud » un écho à Arial :
+le hub change (lumière, végétation, Arialiens libérés qui s'y installent), comme l'éclairage de Ger qui
+variait déjà selon l'avancement dans l'original.
 
 **La fin** : Lumka rentre sur Arial, affronte l'Empereur dans sa citadelle à la jonction des dimensions,
-puis utilise tous les Clims réunis pour refermer la fracture. Arial retrouve sa lumière. Le titre du
-prototype, *Light of Arial*, peut être celui de ce dernier chapitre.
+où le combat se joue en basculant entre elles, puis utilise tous les Clims réunis pour refermer la fracture.
+Arial retrouve sa lumière. Le titre du prototype, *Light of Arial*, peut être celui de ce dernier chapitre.
 
 **Les objets, rendus cohérents** :
 - **Clims bleus** : 200 au total (chiffre rond et affiché partout), dont 70 donnés par 7 Arialiens.
-  Le prologue parle des Clims d'Arial en général, sans chiffre.
+  Le prologue parle des Clims d'Arial en général, sans chiffre. Environ un tiers n'existe que dans une dimension.
 - **Clims rouges** : vie. **Clims blancs** : mécanismes des Terioriams, parfois piégés.
-- **Clims violets** : planer quelques secondes, comme dans l'original. Le double saut devient un pouvoir
-  gagné plus tard, pour que le Clim violet garde son utilité.
-- **Fruits 4D** : passer d'une dimension à l'autre dans un niveau (plateformes qui apparaissent, ponts qui
-  s'alignent). Ils arrivent au milieu du jeu, une fois les bases maîtrisées.
-- **Énergie** (dash, tir) : se recharge seule, et plus vite en ramassant des Clims.
+- **Clims violets** : planer quelques secondes, comme dans l'original.
+- **Fruits 4D** : imposent une dimension ; plus tard, rechargent l'énergie de bascule.
 
-## 3. Pouvoirs, dans l'ordre où Lumka les gagne
+## 4. Pouvoirs, dans l'ordre où Lumka les gagne
 
 | Pouvoir | Nom d'origine | Où | Effet |
 |---|---|---|---|
 | Se déplacer, courir | Alpha | Prison (prologue) | course analogique |
 | Sauter | Altopy | Prison (prologue) | saut à hauteur variable |
+| Fruits 4D | *prototype* | Prison (prologue) | la dimension change en mangeant un fruit |
+| Bascule libre | *nouveau* | Prairie des eaux | changer de dimension à volonté, contre de l'énergie |
 | Dash | *nouveau* | Prairie des eaux | dash au sol, puis en l'air |
 | Tir | Eta | Marais rocheux | tir, cages, cibles, renvoi des bombes |
-| Double saut | *nouveau* (ex-Fly) | Monts Célestes | salto en l'air |
-| Fruits 4D | *prototype* | Cité des Terioriams | changement de dimension |
-| Solidifier | Solidify | Désert rocheux | changer la lave en roche |
+| Double saut | *nouveau* (ex-Fly) | Monts Célestes | salto en l'air, enchaînable avec une bascule |
+| Ancres | *nouveau* | Cité des Terioriams | figer un objet dans sa dimension |
+| Solidify | Solidify | Désert rocheux | devient une propriété du bleu : la lave y est roche. Le pouvoir permet de rester sur la lave figée en revenant au neutre, quelques secondes |
 | Mode combat | *prototype* | Désert rocheux | verrouillage sur un ennemi (Ctrl) |
 
-## 4. Plan des niveaux pour 10 à 15 heures
+## 5. Plan des niveaux pour 10 à 15 heures
 
 Durées estimées pour un joueur qui ramasse une bonne partie des Clims ; ce sont des ordres de grandeur.
 « Existant » veut dire que la scène est dans le `.blend` et se porte avec la chaîne actuelle ; « Nouveau »
-demande de la modélisation.
+demande de la modélisation. Chaque niveau existant reçoit une couche 4D : des objets ajoutés ou dédoublés
+dans le builder, sans remodéliser le décor.
 
-| # | Chapitre | Scène | Nature | Contenu | Durée |
+| # | Chapitre | Scène | Nature | Ce que la 4D y apporte | Durée |
 |---|---|---|---|---|---|
-| 0 | Prologue : la Prison | Prison of the Terioriams (1re moitié) | Existant, à scinder | Cinématique Opus Climus, réveil, dalle, Alpha et Altopy, évasion | 20 min |
-| — | Hub : l'Île Cosmologique | Ger_FieldSwamp | Existant, porté | Retour entre chaque monde, change avec l'avancement | 1 h au total |
-| 1 | La Prairie des eaux | Prairie_of_the waters | Existant | Premiers Terioriams, 3 cages, dash | 50 min |
-| 2 | Le Marais rocheux | Swamp_intro + Swamp_bug | Existant ×2, à relier | Nénuphars et graines, Eta, premier boss | 1 h 15 |
-| 3 | Les Monts Célestes | Mountain_high | Existant, à terminer | Météo, sous l'eau, Clims violets, double saut | 1 h |
-| 4 | La Cité des Terioriams | Underground | Existant, à refaire à la main | Infiltration, fruits 4D, Somtraj | 1 h 15 |
-| 5 | Les Mines | Chariot_mine + Chariot_mine2 | Existant | Fuite de la Cité en wagonnet | 30 min |
-| 6 | Le Désert rocheux | Rock_desert | Existant | Solidify, mode combat, vaisseaux (renvoi des bombes) | 1 h |
-| 7 | Le Désert de lave | Desert_lava | Existant, à terminer | Lave, Solidify poussé à fond | 1 h |
-| 8 | La Forêt des échos | *nouveau* | Nouveau | Niveau entièrement bâti sur les dimensions | 1 h |
-| 9 | Retour à la Prison | Prison of the Terioriams (2e moitié) | Existant, à scinder | Libérer les derniers Arialiens, voler l'accès à la citadelle | 50 min |
-| 10 | Arial en ruines | *nouveau* (île, maisons, pont du prototype) | Nouveau, base existante | Le monde d'origine de Lumka, dernières énigmes | 1 h |
-| 11 | La Citadelle impériale | *nouveau* | Nouveau | Ascension et combat contre l'Empereur | 1 h |
+| 0 | Prologue : la Prison | Prison of the Terioriams (1re moitié) | Existant, à scinder | Premier fruit, évasion par les barreaux absents en neutre, Alpha et Altopy | 25 min |
+| — | Hub : l'Île Cosmologique | Ger_FieldSwamp | Existant, porté | Portails visibles seulement dans certaines dimensions ; l'île se recompose à chaque monde recousu | 1 h au total |
+| 1 | La Prairie des eaux | Prairie_of_the waters | Existant | Ruisseaux gelés en bleu, courants en rouge ; bascule libre et dash | 1 h |
+| 2 | Le Marais rocheux | Swamp_intro + Swamp_bug | Existant ×2, à relier | Nénuphars qui poussent en rouge ; trois dimensions ; Eta ; premier boss (un Terioriam ancré) | 1 h 15 |
+| 3 | Les Monts Célestes | Mountain_high | Existant, à terminer | Météo selon la dimension, bascule en l'air, double saut | 1 h |
+| 4 | La Cité des Terioriams | Underground | Existant, à refaire à la main | Infiltration : patrouilles qui ne voient qu'une dimension ; ancres ; Somtraj | 1 h 15 |
+| 5 | Les Mines | Chariot_mine + Chariot_mine2 | Existant | Fuite en wagonnet : basculer pour faire apparaître les rails | 30 min |
+| 6 | Le Désert rocheux | Rock_desert | Existant | Solidify, mode combat, vaisseaux dont les bombes changent de dimension | 1 h |
+| 7 | Le Désert de lave | Desert_lava | Existant, à terminer | Dimensions extrêmes, lave et roche en alternance | 1 h |
+| 8 | La Forêt des échos | *nouveau* | Nouveau | La dimension change seule par vagues ; énigmes de timing | 1 h |
+| 9 | Retour à la Prison | Prison of the Terioriams (2e moitié) | Existant, à scinder | La prison revisitée avec tous les pouvoirs : libérer les derniers Arialiens | 50 min |
+| 10 | Arial en ruines | *nouveau* (île, maisons, pont du prototype) | Nouveau, base existante | Les dimensions presque recousues se superposent | 1 h |
+| 11 | La Citadelle impériale | *nouveau* | Nouveau | Ascension, puis l'Empereur qui bascule avec Lumka | 1 h |
 | — | Épilogue | Final_game, « And Then and Then » | Existant | Arial rallumée, crédits | 10 min |
 
-**Total** : environ 12 h en ligne droite, 15 h en cherchant tous les Clims. 10 niveaux sur 13 existent déjà
-dans le `.blend`, ce qui confirme qu'on peut réutiliser les modélisations de Naball.
+**Total** : environ 12 h en ligne droite, 15 h en cherchant tous les Clims. 10 chapitres sur 13 s'appuient
+sur des scènes déjà dans le `.blend`.
 
 **Répartition des 200 Clims** (proposition) : Ger 20, Prairie 20, Marais 20, Monts 12, Cité 12, Mines 6,
 Désert rocheux 12, Désert de lave 10, Forêt des échos 10, Prison 5, Arial 3, soit 130 posés, plus 70
 donnés par les 7 Arialiens.
 
-**Portails du hub** : un portail par chapitre (1 à 8), ouverts dans l'ordre. Les chapitres 9 à 11 passent
-par un portail de la Prison qui ne s'ouvre qu'après la Forêt des échos : c'est ce qui explique le retour en
-Prison (incohérence 6) et donne un rôle au portail scellé (incohérence 3). Certains portails demandent un
-nombre minimal de Clims pour s'ouvrir, comme l'annonçait Helpi (« ils te permettront d'accéder à des lieux cachés »).
+**Portails du hub** : un portail par chapitre (1 à 8), ouverts dans l'ordre, certains visibles seulement
+dans une dimension. Les chapitres 9 à 11 passent par le portail scellé de la Prison, qui ne s'ouvre qu'après
+la Forêt des échos : c'est ce qui explique le retour en Prison (incohérence 6) et donne un rôle au portail
+scellé (incohérence 3).
 
-## 5. Ce que ça change pour le remake
+## 6. Ce que ça change pour le remake
 
-- Réécrire les dialogues de `Assets/lang` pour Lumka et les nouvelles commandes (ordre des pouvoirs, Clims violets).
-- Rendre le vol au Clim violet et faire du double saut un pouvoir gagné (Monts Célestes).
+- **Priorité n° 1 : le système de dimensions**, avant de porter d'autres niveaux. Reprendre `TransDimensional*`
+  du prototype en le remettant d'aplomb : bascule progressive au lieu d'instantanée, objets qui portent
+  Lumka pendant qu'ils bougent, dimension par objet (ancres), écho visuel des autres dimensions, teinte
+  d'écran sans passer par URP. Puis une salle de test dans le hub pour régler les sensations.
+- Retirer Naball : la boule, son menu de construction et les dialogues qui la nomment.
+- Réécrire les dialogues de `Assets/lang` pour Lumka, la 4D et les nouvelles commandes.
+- Rendre le vol au Clim violet ; le double saut devient un pouvoir gagné (Monts Célestes).
 - Scinder la Prison en prologue et chapitre 9 ; relier Swamp_intro et Swamp_bug ; terminer Mountain_high et Desert_lava.
 - Refaire Underground à la main en cité (son `WorldGenerator` n'a pas d'équivalent Unity).
-- Nouveaux besoins de modélisation : la Forêt des échos, Arial en ruines (partir de la scène `Test_arial` du prototype), la Citadelle, l'Empereur.
+- Nouveaux besoins de modélisation : la Forêt des échos, Arial en ruines (partir de la scène `Test_arial`
+  du prototype), la Citadelle, l'Empereur.
 
 ## Décisions attendues d'Alan
 
-1. Naball dans l'histoire : option A (ancien gardien, recommandée) ou B (disparaît) ?
-2. Le vol : Clim violet comme dans l'original, et double saut en pouvoir gagné plus tard (recommandé) ?
-3. L'ordre des chapitres du tableau 4, en particulier les Monts Célestes avant la Cité ?
+1. Le vol : Clim violet comme dans l'original, et double saut en pouvoir gagné plus tard (recommandé) ?
+2. Solidify fondu dans la 4D (la lave est roche en bleu) plutôt que pouvoir séparé (recommandé) ?
+3. L'ordre des chapitres du tableau 5, en particulier les Monts Célestes avant la Cité ?

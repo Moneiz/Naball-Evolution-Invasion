@@ -10,6 +10,15 @@ Tenu par le skill `product-owner`. Priorités à valider par Alan.
   - [ ] Le portail de Prairie_of_the waters affiche l'écran de chargement
 - **Taille** : S · **Priorité** : Indispensable · **Statut** : À faire
 
+### Système de dimensions (4D), boucle de jeu principale
+- **Pour qui / pourquoi** : En tant que joueur, je veux faire basculer le monde entre les dimensions bleue, neutre et rouge afin de résoudre les salles autrement qu'en sautant.
+- **Critères d'acceptation** :
+  - [ ] Manger un fruit 4D fait glisser la dimension vers sa valeur en une demi-seconde environ, avec une teinte d'écran
+  - [ ] Des objets du niveau bougent, tournent, apparaissent ou disparaissent selon la dimension, et portent Lumka pendant qu'ils bougent
+  - [ ] Une salle de test dans le hub se résout uniquement en basculant
+- **Référence d'origine** : `TransDimensional*` et `Fruit4D` du prototype lumka-player ; `docs/scenario.md` section 2
+- **Taille** : L (à découper : bascule et objets, puis écho visuel, puis bascule libre) · **Priorité** : Indispensable · **Statut** : À faire
+
 ### Régler les contrôles de Lumka en jeu
 - **Pour qui / pourquoi** : En tant que joueur, je veux un personnage agréable à diriger afin de prendre plaisir à explorer.
 - **Critères d'acceptation** :
