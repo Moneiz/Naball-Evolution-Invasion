@@ -1,6 +1,6 @@
 # Feuille de route du remake
 
-Tenue par le skill `chef-de-projet`. État au 29/09/2026.
+Tenue par le skill `chef-de-projet`. État au 29/09/2026. Scénario et plan des niveaux proposés : `docs/scenario.md`.
 
 | Jalon | État | Où |
 |---|---|---|
