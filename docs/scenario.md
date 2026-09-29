@@ -159,7 +159,7 @@ qui rapporte des Clims.
 - **Exceptions** : le premier fruit 4D se trouve dans la cellule du prologue, sans Atomium. La bascule libre
   est le premier Atomium, à la fin de la Prairie. Le dash et l'Eta viennent des Arialiens libérés dans la
   Prairie et le Marais, qui les enseignent à Lumka.
-- **Option, à valider** : dépenser des Clims bleus sur la dalle pour agrandir la jauge d'énergie ou
+- **Améliorations (validé par Alan)** : dépenser des Clims bleus sur la dalle pour agrandir la jauge d'énergie ou
   renforcer un pouvoir (Bulle plus grande, une Ancre de plus). Ça donne une raison concrète de tout ramasser.
 
 ## 5. Plan des niveaux pour 10 à 15 heures
