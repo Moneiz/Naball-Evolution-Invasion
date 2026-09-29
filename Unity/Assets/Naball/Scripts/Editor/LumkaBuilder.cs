@@ -84,7 +84,7 @@ namespace Naball.EditorTools
                         shared[i] = materials[Slots[index].material];
                 }
                 skin.sharedMaterials = shared;
-                skin.updateWhenOffscreen = true;  // les bornes suivent l'animation (dash, salto)
+                skin.updateWhenOffscreen = true;  // les bornes suivent l'animation (dash, saut)
             }
 
             // Orientation : Lumka doit regarder vers +Z (les yeux devant les hanches).
@@ -196,8 +196,8 @@ namespace Naball.EditorTools
             ?? clips.FirstOrDefault(c => c.name.EndsWith(name));
 
         /// <summary>
-        /// Animator piloté uniquement par LumkaController : Speed, Grounded, VerticalSpeed et quatre déclencheurs.
-        /// Couche de base : course, saut, salto, chute, dash. Couche "Tir" limitée au haut du corps.
+        /// Animator piloté uniquement par LumkaController : Speed, Grounded, VerticalSpeed et trois déclencheurs.
+        /// Couche de base : course, saut, chute, dash. Couche "Tir" limitée au haut du corps.
         /// </summary>
         static AnimatorController BuildAnimator(GameObject model)
         {
@@ -206,7 +206,6 @@ namespace Naball.EditorTools
             var idle = Clip(clips, "idle");
             var run = Clip(clips, "course_lumka_18 (1)");  // copie en boucle avec les événements Step
             var jump = Clip(clips, "saut_lumka_1-34");
-            var flip = Clip(clips, "saltot1-26");
             var dash = Clip(clips, "dash");
             var shoot = Clip(clips, "shoot");
 
@@ -216,7 +215,7 @@ namespace Naball.EditorTools
             controller.AddParameter("Speed", AnimatorControllerParameterType.Float);
             controller.AddParameter("Grounded", AnimatorControllerParameterType.Bool);
             controller.AddParameter("VerticalSpeed", AnimatorControllerParameterType.Float);
-            foreach (var trigger in new[] { "Jump", "DoubleJump", "Dash", "Shoot" })
+            foreach (var trigger in new[] { "Jump", "Dash", "Shoot" })
                 controller.AddParameter(trigger, AnimatorControllerParameterType.Trigger);
 
             var sm = controller.layers[0].stateMachine;
@@ -230,8 +229,6 @@ namespace Naball.EditorTools
 
             var jumpState = sm.AddState("Jump");
             jumpState.motion = jump;
-            var flipState = sm.AddState("DoubleJump");
-            flipState.motion = flip;
             var fall = sm.AddState("Fall");
             fall.motion = jump;       // pose figée de la fin du saut
             fall.speed = 0f;
@@ -252,7 +249,6 @@ namespace Naball.EditorTools
                 return t;
             }
             Any(jumpState, "Jump");
-            Any(flipState, "DoubleJump");
             Any(dashState, "Dash");
 
             AnimatorStateTransition Link(AnimatorState from, AnimatorState to, float duration, float? exitTime = null)
@@ -267,14 +263,13 @@ namespace Naball.EditorTools
             // Quitter le sol sans sauter (rebord) : chute.
             Cond(Link(locomotion, fall, 0.15f), AnimatorConditionMode.IfNot, 0f, "Grounded");
             // Atterrissage, seulement une fois la montée finie pour ne pas retomber en course au décollage.
-            foreach (var air in new[] { jumpState, flipState, fall })
+            foreach (var air in new[] { jumpState, fall })
             {
                 var land = Link(air, locomotion, 0.1f);
                 Cond(land, AnimatorConditionMode.If, 0f, "Grounded");
                 Cond(land, AnimatorConditionMode.Less, 0.5f, "VerticalSpeed");
             }
             Link(jumpState, fall, 0.2f, 0.95f);
-            Link(flipState, fall, 0.15f, 0.95f);
             Cond(Link(dashState, locomotion, 0.1f, 0.9f), AnimatorConditionMode.If, 0f, "Grounded");
             Cond(Link(dashState, fall, 0.1f, 0.9f), AnimatorConditionMode.IfNot, 0f, "Grounded");
 

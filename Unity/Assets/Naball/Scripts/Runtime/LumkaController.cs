@@ -6,7 +6,8 @@ namespace Naball
     /// Lumka, le héros du remake (prototype lumka-player de 2021), repris avec un contrôle plus précis :
     /// déplacement analogique relatif à la caméra avec accélération et virages progressifs, pentes suivies,
     /// saut à hauteur variable avec tolérance au bord (coyote time) et mémoire de la touche (jump buffer),
-    /// double saut en salto (pouvoir Fly de Naball), dash et tir qui consomment une jauge d'énergie.
+    /// bascule entre les dimensions, dash et tir, qui consomment la même jauge d'énergie.
+    /// Sur un objet qui bouge avec la dimension, Lumka est emportée avec lui.
     /// Le prototype déplaçait Lumka par transform.Translate, ce qui traversait les murs et ignorait les pentes :
     /// ici tout passe par le Rigidbody.
     /// </summary>
@@ -27,7 +28,6 @@ namespace Naball
 
         [Header("Saut")]
         public float jumpHeight = 2.6f;
-        public float doubleJumpHeight = 2f;
         [Tooltip("Gravité multipliée pendant la chute : saut plus vif, moins flottant.")]
         public float fallGravityMultiplier = 2.2f;
         [Tooltip("Gravité multipliée en montée quand on relâche la touche : saut court.")]
@@ -37,6 +37,10 @@ namespace Naball
         public float coyoteTime = 0.12f;
         [Tooltip("Un appui sur saut juste avant d'atterrir est gardé en mémoire pendant ce temps.")]
         public float jumpBuffer = 0.15f;
+
+        [Header("Bascule de dimension (F / R)")]
+        [Tooltip("Énergie d'une bascule libre (pouvoir obtenu avec le premier Atomium).")]
+        public float shiftCost = 0.15f;
 
         [Header("Dash (Maj)")]
         public float dashSpeed = 20f;
@@ -72,13 +76,15 @@ namespace Naball
         float lastGroundedTime = -10f, jumpPressedTime = -10f, lastSpendTime = -10f;
         float dashEnd = -10f, nextDashTime, nextShotTime;
         Vector3 dashDirection;
-        bool jumping, airDashUsed, doubleJumpUsed, dashRequested, shootRequested;
+        bool jumping, airDashUsed, dashRequested, shootRequested;
+        int shiftRequested;
+        DimensionalObject groundObject;
+        Vector3 groundPoint;
 
         static readonly int SpeedId = Animator.StringToHash("Speed");
         static readonly int GroundedId = Animator.StringToHash("Grounded");
         static readonly int VerticalSpeedId = Animator.StringToHash("VerticalSpeed");
         static readonly int JumpId = Animator.StringToHash("Jump");
-        static readonly int DoubleJumpId = Animator.StringToHash("DoubleJump");
         static readonly int DashId = Animator.StringToHash("Dash");
         static readonly int ShootId = Animator.StringToHash("Shoot");
 
@@ -105,6 +111,9 @@ namespace Naball
                 jumpPressedTime = Time.time;
             if (Controls.DashDown)
                 dashRequested = true;
+            int shift = Controls.ShiftDown;
+            if (shift != 0)
+                shiftRequested = shift;
             if (Controls.ShootDown)
                 shootRequested = true;
 
@@ -133,6 +142,16 @@ namespace Naball
             // Direction voulue, relative à la caméra.
             var input = Controls.Move;
             var wish = CameraRelative(input);
+
+            // Bascule libre d'un cran vers le bleu ou le rouge.
+            if (shiftRequested != 0)
+            {
+                var dimensions = DimensionSystem.Instance;
+                float next = Mathf.Clamp(Mathf.Round(dimensions.Target) + shiftRequested, DimensionSystem.Blue, DimensionSystem.Red);
+                if (powers.shift && !Mathf.Approximately(next, dimensions.Target) && Spend(shiftCost))
+                    dimensions.ShiftTo(next);
+                shiftRequested = 0;
+            }
 
             // Dash
             if (dashRequested)
@@ -178,20 +197,15 @@ namespace Naball
                 jumpPressedTime = -10f;
                 Trigger(JumpId);
             }
-            else if (buffered && !Grounded && !doubleJumpUsed && powers.fly && Time.time - lastGroundedTime > coyoteTime)
-            {
-                velocity.y = Mathf.Sqrt(2f * gravity * doubleJumpHeight);
-                doubleJumpUsed = true;
-                jumping = true;
-                jumpPressedTime = -10f;
-                Trigger(DoubleJumpId);
-            }
 
             if (Grounded && !jumping)
             {
                 // Au sol : la vitesse suit la pente, et une légère poussée vers le bas garde Lumka collée
                 // au sol dans les descentes au lieu de la faire décoller à chaque bosse.
                 velocity = Vector3.ProjectOnPlane(horizontal, groundNormal) - groundNormal * 1.5f;
+                // Sur un objet qui bouge avec la dimension, Lumka est emportée avec lui.
+                if (groundObject != null)
+                    velocity += groundObject.PointVelocity(groundPoint);
             }
             else
             {
@@ -231,6 +245,8 @@ namespace Naball
                     if (Vector3.Angle(hit.normal, Vector3.up) > maxSlope)
                         continue;
                     groundNormal = hit.normal;
+                    groundPoint = hit.point;
+                    groundObject = hit.collider.GetComponentInParent<DimensionalObject>();
                     found = true;
                     break;
                 }
@@ -240,12 +256,14 @@ namespace Naball
                 if (footsteps != null)
                     footsteps.Step();  // bruit d'atterrissage
                 airDashUsed = false;
-                doubleJumpUsed = false;
                 jumping = false;
             }
             Grounded = found;
             if (!found)
+            {
                 groundNormal = Vector3.up;
+                groundObject = null;
+            }
             else
                 lastGroundedTime = Time.time;
         }

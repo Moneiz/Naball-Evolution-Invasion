@@ -25,8 +25,9 @@ Un avertissement à cet endroit signifie que les points d'apparition risquent d'
 | Clavier (AZERTY ou QWERTY) | Manette | Action |
 |---|---|---|
 | ZQSD, WASD ou flèches | stick gauche (analogique) | courir, dans la direction de la caméra |
-| Espace (maintenir = plus haut) | A | sauter ; en l'air, second saut en salto (pouvoir *Fly*) |
-| Maj | B ou RB | dash, au sol ou une fois en l'air (¼ de la jauge d'énergie) |
+| Espace (maintenir = plus haut) | A | sauter |
+| F / R | LB / RB | basculer d'un cran vers le bleu / le rouge (bascule libre, premier Atomium) |
+| Maj | B | dash, au sol ou une fois en l'air (¼ de la jauge d'énergie) |
 | clic gauche | X | tir vers là où regarde la caméra (1/10 de la jauge) |
 | souris | stick droit (si l'axe `RightStickX/Y` existe) | caméra |
 | Entrée, Espace ou clic | | dialogue suivant |
@@ -35,6 +36,21 @@ Un avertissement à cet endroit signifie que les points d'apparition risquent d'
 
 La jauge d'énergie (en haut à gauche, sous les Clims) remonte seule après une courte pause et clignote en rouge
 quand elle ne suffit pas.
+
+## Dimensions (4D) et salles greybox
+
+La 4D est la boucle de jeu principale (voir `docs/scenario.md`). `DimensionSystem` tient la dimension courante,
+de −1 (bleu) à +1 (rouge), qui glisse vers sa cible en une demi-seconde environ. Les `DimensionalObject` se
+décalent, tournent ou disparaissent selon elle, et portent Lumka pendant qu'ils bougent. Les fruits 4D
+imposent une dimension, et la bascule libre (F / R) coûte de l'énergie.
+
+Les niveaux se prototypent en texte : chaque fichier de `Assets/Naball/Greybox/` décrit une salle
+(format dans `Assets/Naball/Greybox/LISEZMOI.md`), et **Naball › Construire les salles greybox** en fait
+une scène jouable. `SalleTest4D` enseigne la mécanique en quatre salles : fruit, pont qui s'aligne,
+ascenseur qui monte en rouge, murs et lave qui changent selon la dimension.
+
+![La salle de test 4D dans les trois dimensions](Docs/apercu_salle_test_4d.png)
+
 
 ## Lumka : ce qui change par rapport au prototype
 

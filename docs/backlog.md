@@ -17,7 +17,7 @@ Tenu par le skill `product-owner`. Priorités à valider par Alan.
   - [ ] Des objets du niveau bougent, tournent, apparaissent ou disparaissent selon la dimension, et portent Lumka pendant qu'ils bougent
   - [ ] Une salle de test dans le hub se résout uniquement en basculant
 - **Référence d'origine** : `TransDimensional*` et `Fruit4D` du prototype lumka-player ; `docs/scenario.md` section 2
-- **Taille** : L (à découper : bascule et objets, puis écho visuel, puis bascule libre) · **Priorité** : Indispensable · **Statut** : À faire
+- **Taille** : L · **Priorité** : Indispensable · **Statut** : Livré, non testé en jeu (PR #2 : `DimensionSystem`, salle `SalleTest4D`)
 
 ### Régler les contrôles de Lumka en jeu
 - **Pour qui / pourquoi** : En tant que joueur, je veux un personnage agréable à diriger afin de prendre plaisir à explorer.

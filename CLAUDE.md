@@ -43,6 +43,10 @@ On échange en français avec Alan. Commentaires de code, textes du jeu, commits
 - Une classe `MonoBehaviour` par fichier, nom du fichier = nom de la classe, namespace `Naball` (`Naball.EditorTools` pour l'éditeur).
 - Pipeline de rendu intégré (Standard). Pas d'URP tant qu'un besoin concret (post-process des dimensions) ne le justifie pas.
 - Le personnage joué dérive de `PlayerCharacter` ; Clims, portails et dialogues ne connaissent que cette classe.
+- La 4D (dimensions bleu / neutre / rouge) est la boucle de jeu : `DimensionSystem`, `DimensionalObject`, `Fruit4D`.
+- Nouveaux niveaux : d'abord une salle greybox décrite en JSON dans `Unity/Assets/Naball/Greybox/`
+  (format dans son `LISEZMOI.md`), construite par `GreyboxBuilder`, prévisualisable avec `Unity/Tools/greybox_preview.py`.
+- Scénario, pouvoirs et plan des niveaux : `docs/scenario.md`.
 - Commandes via `Controls` : clavier AZERTY et QWERTY, manette. Vitesses de la boule converties depuis les ticks BGE (60/s).
 
 ## Vérifier sans Unity

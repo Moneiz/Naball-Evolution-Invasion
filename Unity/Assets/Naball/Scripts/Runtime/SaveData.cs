@@ -5,14 +5,15 @@ using UnityEngine;
 
 namespace Naball
 {
-    /// <summary>Pouvoirs de la boule (power.gs dans le jeu original).</summary>
+    /// <summary>Pouvoirs du joueur (power.gs dans le jeu original, étendus pour Lumka).</summary>
     [Serializable]
     public class Powers
     {
         // Valeurs de départ choisies pour que la tranche verticale soit jouable dans le hub.
         public bool move = true;   // sprint (Maj)
         public bool jump = true;   // saut (Espace)
-        public bool fly = true;    // vol plané, accordé par Power_ger dans Ger_FieldSwamp
+        public bool fly = true;    // vol plané de la boule, accordé par Power_ger dans Ger_FieldSwamp
+        public bool shift;         // Lumka : bascule libre entre les dimensions (premier Atomium)
         public bool eta;           // tir (C) : pas encore porté
         public bool solidify;      // pas encore porté
     }

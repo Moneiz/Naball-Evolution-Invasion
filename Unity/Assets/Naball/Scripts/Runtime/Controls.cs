@@ -4,8 +4,10 @@ namespace Naball
 {
     /// <summary>
     /// Lecture des commandes, au clavier (QWERTY et AZERTY) comme à la manette, avec l'Input Manager par défaut.
-    /// Clavier : ZQSD / WASD / flèches, Espace saut, Maj dash, clic gauche tir, souris caméra.
-    /// Manette : stick gauche, A saut, B ou gâchette droite dash, X tir, stick droit caméra si l'axe existe.
+    /// Clavier : ZQSD / WASD / flèches, Espace saut, Maj dash, clic gauche tir, F / R bascule vers le bleu / le rouge,
+    /// souris caméra.
+    /// Manette : stick gauche, A saut, B dash, X tir, LB / RB bascule vers le bleu / le rouge, stick droit caméra
+    /// si l'axe existe.
     /// </summary>
     public static class Controls
     {
@@ -48,7 +50,14 @@ namespace Naball
         public static bool JumpDown => !DialogSystem.BlocksInput && AnyDown(KeyCode.Space, KeyCode.JoystickButton0);
         public static bool JumpHeld => !DialogSystem.BlocksInput && Any(KeyCode.Space, KeyCode.JoystickButton0);
         public static bool DashDown => !DialogSystem.BlocksInput &&
-            AnyDown(KeyCode.LeftShift, KeyCode.RightShift, KeyCode.JoystickButton1, KeyCode.JoystickButton5);
+            AnyDown(KeyCode.LeftShift, KeyCode.RightShift, KeyCode.JoystickButton1);
+        /// <summary>Bascule d'un cran : −1 vers le bleu, +1 vers le rouge, 0 sans appui.</summary>
+        public static int ShiftDown =>
+            DialogSystem.BlocksInput ? 0
+            : AnyDown(KeyCode.F, KeyCode.JoystickButton4) ? -1
+            : AnyDown(KeyCode.R, KeyCode.JoystickButton5) ? 1
+            : 0;
+
         public static bool ShootDown => !DialogSystem.BlocksInput &&
             (Input.GetMouseButtonDown(0) || AnyDown(KeyCode.JoystickButton2));
 

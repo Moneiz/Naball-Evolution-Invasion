@@ -12,8 +12,15 @@ namespace Naball
         public float magnetRadius = 9f;
         public float magnetSpeed = 20f;
 
-                void Update()
+        Collider ownCollider;
+
+        void Awake() => ownCollider = GetComponent<Collider>();
+
+        void Update()
         {
+            // Un Clim absent de la dimension courante (collisions coupées) n'est pas attiré.
+            if (ownCollider != null && !ownCollider.enabled)
+                return;
             var player = PlayerCharacter.Current;
             if (player == null || magnetSpeed <= 0f)
                 return;
