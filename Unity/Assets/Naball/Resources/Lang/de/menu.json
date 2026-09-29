@@ -1,0 +1,60 @@
+{
+ "entries": [
+  {
+   "key": "menu.Play",
+   "value": "Spielen"
+  },
+  {
+   "key": "menu.Option",
+   "value": "Einstellung"
+  },
+  {
+   "key": "menu.Bonus",
+   "value": "Beilagen"
+  },
+  {
+   "key": "menu.Exit",
+   "value": "Verlassen"
+  },
+  {
+   "key": "menu.New",
+   "value": "Anfangen"
+  },
+  {
+   "key": "menu.Load",
+   "value": "Zurücknehmen"
+  },
+  {
+   "key": "menu.BackPlay",
+   "value": "Rückkehr"
+  },
+  {
+   "key": "menu.Credit",
+   "value": "Kredite"
+  },
+  {
+   "key": "menu.Web",
+   "value": "Webseite"
+  },
+  {
+   "key": "menu.Account",
+   "value": "Mein Konto"
+  },
+  {
+   "key": "menu.BackBonus",
+   "value": "Rückkehr"
+  },
+  {
+   "key": "menu.BlocChoice",
+   "value": "Wählen Sie einen Schutzblock :"
+  },
+  {
+   "key": "menu.BackBloc",
+   "value": "Rückkehr"
+  },
+  {
+   "key": "menu.Version",
+   "value": "Version 0.6.0"
+  }
+ ]
+}

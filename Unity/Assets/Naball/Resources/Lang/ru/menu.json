@@ -1,0 +1,60 @@
+{
+ "entries": [
+  {
+   "key": "menu.Play",
+   "value": "Играть"
+  },
+  {
+   "key": "menu.Option",
+   "value": "Настройки"
+  },
+  {
+   "key": "menu.Bonus",
+   "value": "Бонус"
+  },
+  {
+   "key": "menu.Exit",
+   "value": "Выйти"
+  },
+  {
+   "key": "menu.New",
+   "value": "Новая игра"
+  },
+  {
+   "key": "menu.Load",
+   "value": "Загрузить"
+  },
+  {
+   "key": "menu.BackPlay",
+   "value": "Вернуться"
+  },
+  {
+   "key": "menu.Credit",
+   "value": "Кредитная"
+  },
+  {
+   "key": "menu.Web",
+   "value": "Веб-сайт"
+  },
+  {
+   "key": "menu.Account",
+   "value": "Мой профиль"
+  },
+  {
+   "key": "menu.BackBonus",
+   "value": "Вернуться"
+  },
+  {
+   "key": "menu.BlocChoice",
+   "value": "Выберите сохранённую игру :"
+  },
+  {
+   "key": "menu.BackBloc",
+   "value": "Вернуться"
+  },
+  {
+   "key": "menu.Version",
+   "value": "Версия 0.6.4"
+  }
+ ]
+}

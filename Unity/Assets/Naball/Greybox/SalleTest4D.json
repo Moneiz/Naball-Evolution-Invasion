@@ -1,0 +1,63 @@
+{
+  "titre": "Salle de test 4D",
+  "apparition": [0, 1.05, 2],
+  "orientation": 0,
+  "dimensionDepart": "neutre",
+  "dureeBascule": 0.6,
+  "pouvoirs": [],
+
+  "pieces": [
+    { "nom": "Salle 1 - sol", "position": [0, 0, 10], "taille": [12, 1, 20] },
+    { "nom": "Salle 1 - mur absent en bleu", "surface": "mur", "position": [0, 1, 14], "taille": [14, 4, 1], "dimensions": "neutre,rouge" },
+
+    { "nom": "Salle 2 - pont tournant", "position": [0, 0.4, 25], "taille": [3, 0.6, 10],
+      "rotationNeutre": [0, 90, 0], "rotationRouge": [0, 90, 0] },
+    { "nom": "Salle 2 - sol", "position": [0, 0, 37], "taille": [12, 1, 14] },
+
+    { "nom": "Salle 3 - ascenseur rouge", "position": [0, 1, 43.5], "taille": [3, 0.5, 3], "rouge": [0, 6, 0] },
+    { "nom": "Salle 3 - falaise", "surface": "mur", "position": [0, 0, 51], "taille": [12, 7, 12] },
+
+    { "nom": "Salle 4 - couloir", "position": [0, 6, 66], "taille": [6, 1, 18] },
+    { "nom": "Salle 4 - mur qui s'enfonce en bleu", "surface": "mur", "position": [0, 7, 65.5], "taille": [8, 4, 1], "bleu": [0, -4.2, 0] },
+    { "nom": "Salle 4 - mur qui s'enfonce en rouge", "surface": "mur", "position": [0, 7, 72.5], "taille": [8, 4, 1], "rouge": [0, -4.2, 0] },
+    { "nom": "Salle 4 - lave", "surface": "lave", "position": [0, 6, 77], "taille": [6, 1, 4], "dimensions": "neutre,rouge" },
+    { "nom": "Salle 4 - lave figée", "position": [0, 6, 77], "taille": [6, 1, 4], "dimensions": "bleu" },
+    { "nom": "Salle 4 - arrivée", "position": [0, 6, 84], "taille": [8, 1, 10] }
+  ],
+
+  "fruits": [
+    { "position": [0, 1.8, 8], "vers": "bleu" },
+    { "position": [0, 1.8, 17], "vers": "neutre" }
+  ],
+
+  "clims": [
+    { "position": [4, 2, 6], "dimensions": "bleu" },
+    { "position": [0, 2.5, 25] },
+    { "position": [4.5, 2, 38], "dimensions": "rouge" },
+    { "position": [-4.5, 2, 38], "dimensions": "bleu" },
+    { "position": [0, 9.5, 44], "dimensions": "rouge" },
+    { "position": [0, 8, 69] },
+    { "position": [0, 8, 88] }
+  ],
+
+  "atomiums": [
+    { "position": [0, 2, 19], "pouvoir": "bascule",
+      "message": "Atomium : bascule libre ! F vers le bleu, R vers le rouge (LB / RB à la manette)." }
+  ],
+
+  "controles": [
+    { "position": [0, 1, 17] },
+    { "position": [0, 1, 32] },
+    { "position": [0, 7, 52] },
+    { "position": [0, 7, 74] }
+  ],
+
+  "panneaux": [
+    { "position": [0, 1, 5], "texte": "1. Le mur n'existe pas en bleu : mange le fruit bleu" },
+    { "position": [0, 1, 21], "texte": "2. Le pont ne s'aligne qu'en bleu : F" },
+    { "position": [0, 1, 40], "texte": "3. En rouge, l'ascenseur monte : R, R" },
+    { "position": [0, 7, 60], "texte": "4. Un mur s'efface en bleu, l'autre en rouge, et la lave fige en bleu" }
+  ],
+
+  "fin": { "position": [0, 7, 86], "texte": "Salle de test terminée ! F9 pour recommencer." }
+}

@@ -1,0 +1,24 @@
+{
+ "entries": [
+  {
+   "key": "hud.pause.txt1",
+   "value": "Retour au jeu"
+  },
+  {
+   "key": "hud.pause.txt2",
+   "value": "Carte du monde"
+  },
+  {
+   "key": "hud.pause.txt3",
+   "value": "Aide"
+  },
+  {
+   "key": "hud.pause.txt4",
+   "value": "Sauvegarde et quitter"
+  },
+  {
+   "key": "hud.pause.txt5",
+   "value": "Options"
+  }
+ ]
+}

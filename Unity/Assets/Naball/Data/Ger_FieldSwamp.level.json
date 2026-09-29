@@ -1,0 +1,1764 @@
+{
+ "scene": "Ger_FieldSwamp",
+ "hidden": [
+  "Cube",
+  "Cylinder.010",
+  "Ger.barrier",
+  "Ger.wall",
+  "Plane.148",
+  "Plane.172",
+  "eyes_helpi",
+  "eyes_helpi.001"
+ ],
+ "clims": [
+  {
+   "objectName": "ger.clim20",
+   "id": "clim20",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim19",
+   "id": "clim19",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim18",
+   "id": "clim18",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim17",
+   "id": "clim17",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim16",
+   "id": "clim16",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim15",
+   "id": "clim15",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim14",
+   "id": "clim14",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim13",
+   "id": "clim13",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim12",
+   "id": "clim12",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim11",
+   "id": "clim11",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim10",
+   "id": "clim10",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim9",
+   "id": "clim9",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim8",
+   "id": "clim8",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim7",
+   "id": "clim7",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim6",
+   "id": "clim6",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim5",
+   "id": "clim5",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim4",
+   "id": "clim4",
+   "collectRadius": 9.0,
+   "magnetSpeed": 10.0
+  },
+  {
+   "objectName": "ger.clim3",
+   "id": "clim3",
+   "collectRadius": 9.0,
+   "magnetSpeed": 10.0
+  },
+  {
+   "objectName": "ger.clim2",
+   "id": "clim2",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  },
+  {
+   "objectName": "ger.clim1",
+   "id": "clim1",
+   "collectRadius": 9.0,
+   "magnetSpeed": 20.0
+  }
+ ],
+ "portals": [
+  {
+   "objectName": "Ger.portal.desert1",
+   "targetScene": "Rock_desert",
+   "requiredProgress": 4,
+   "locked": false,
+   "delay": 4.0,
+   "loadingImage": "desert2",
+   "indicatorName": "Cos_back.desert1"
+  },
+  {
+   "objectName": "Ger.portal.under1",
+   "targetScene": "Underground",
+   "requiredProgress": 3,
+   "locked": false,
+   "delay": 4.0,
+   "loadingImage": "under",
+   "indicatorName": "Cos_back.under1"
+  },
+  {
+   "objectName": "Ger.portal.Swamp1",
+   "targetScene": "Swamp_bug",
+   "requiredProgress": 2,
+   "locked": false,
+   "delay": 4.0,
+   "loadingImage": "swp1",
+   "indicatorName": "Cos_back.swamp1"
+  },
+  {
+   "objectName": "Ger.portal.Swamp1.001",
+   "targetScene": "Swamp_bug",
+   "requiredProgress": 0,
+   "locked": true,
+   "delay": 4.0,
+   "loadingImage": "",
+   "indicatorName": ""
+  },
+  {
+   "objectName": "Ger.portal.Mountain",
+   "targetScene": "Prison of the Terioriams",
+   "requiredProgress": 0,
+   "locked": true,
+   "delay": 4.0,
+   "loadingImage": "",
+   "indicatorName": ""
+  },
+  {
+   "objectName": "Ger.portal.Prairie",
+   "targetScene": "Prairie_of_the waters",
+   "requiredProgress": 0,
+   "locked": false,
+   "delay": 5.0,
+   "loadingImage": "prairie",
+   "indicatorName": "Cos_back.prairie"
+  }
+ ],
+ "soundFields": [
+  {
+   "objectName": "Sound_Field.006",
+   "clip": "Ger_space.mp3",
+   "radius": 115.0
+  },
+  {
+   "objectName": "Sound_Field.005",
+   "clip": "Ger_Cave.mp3",
+   "radius": 40.0
+  },
+  {
+   "objectName": "Sound_Field.004",
+   "clip": "Ger_Cave.mp3",
+   "radius": 125.0
+  },
+  {
+   "objectName": "Sound_Field.003",
+   "clip": "Ger_beach.mp3",
+   "radius": 190.0
+  },
+  {
+   "objectName": "Sound_Field.002",
+   "clip": "Ger_Swamp.mp3",
+   "radius": 65.0
+  },
+  {
+   "objectName": "Sound_Field.001",
+   "clip": "Ger_Fields.mp3",
+   "radius": 84.0
+  }
+ ],
+ "ambientSounds": [
+  {
+   "objectName": "Sound_FieldSwamp",
+   "clip": "Ger_drums.mp3",
+   "volume": 1.0
+  },
+  {
+   "objectName": "Waterfall.001",
+   "clip": "WATERF2.WAV",
+   "volume": 1.0
+  },
+  {
+   "objectName": "Ger.normal",
+   "clip": "Atmo_ger.wav",
+   "volume": 1.0
+  }
+ ],
+ "dialogTriggers": [
+  {
+   "objectName": "Ger.boat",
+   "dialog": "fsoon"
+  },
+  {
+   "objectName": "Ger.normal",
+   "dialog": "#02x01"
+  }
+ ],
+ "rotators": [
+  {
+   "objectName": "Cos_back",
+   "radiansPerSecond": [
+    0.0,
+    0.0,
+    5.238
+   ],
+   "local": true
+  },
+  {
+   "objectName": "Cos_back.prairie",
+   "radiansPerSecond": [
+    0.0,
+    0.0,
+    5.238
+   ],
+   "local": true
+  },
+  {
+   "objectName": "Empty.004",
+   "radiansPerSecond": [
+    0.0,
+    0.0,
+    41.886
+   ],
+   "local": true
+  }
+ ],
+ "progress": [
+  {
+   "progress": 0,
+   "playerSpawn": [
+    -8,
+    0,
+    253
+   ],
+   "cameraPosition": [
+    -49,
+    1,
+    8
+   ],
+   "welcomeDialog": "#02x01"
+  },
+  {
+   "progress": 1,
+   "playerSpawn": [
+    -8,
+    0,
+    253
+   ],
+   "cameraPosition": [
+    -49,
+    1,
+    8
+   ],
+   "welcomeDialog": "#02x01"
+  },
+  {
+   "progress": 2,
+   "playerSpawn": [
+    18,
+    40,
+    5
+   ],
+   "cameraPosition": [
+    26,
+    5,
+    14
+   ],
+   "welcomeDialog": "#02x02"
+  },
+  {
+   "progress": 3,
+   "playerSpawn": [
+    18,
+    40,
+    5
+   ],
+   "cameraPosition": [
+    -16,
+    46,
+    10
+   ],
+   "welcomeDialog": "#02x03"
+  },
+  {
+   "progress": 4,
+   "playerSpawn": [
+    18,
+    40,
+    5
+   ],
+   "cameraPosition": [
+    -16,
+    46,
+    30
+   ],
+   "welcomeDialog": "#02x04"
+  }
+ ],
+ "physics": [
+  {
+   "objectName": "ger.dale",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.portal.desert1",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Cos_back.desert1",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Cos_back.under1",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.portal.under1",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "lilypad_001.005",
+   "bodyType": 1,
+   "bound": 4,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.portal.Swamp1",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Cos_back.swamp1",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "ger.lava",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.boat.001",
+   "bodyType": 1,
+   "bound": 5,
+   "ghost": false
+  },
+  {
+   "objectName": "Veg_cosmos2.002",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.portal.Swamp1.001",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.portal.Mountain",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ruination.002",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.terio",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.space.Fence",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.backSpa",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.space",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.box",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.protect.elect",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.boat",
+   "bodyType": 1,
+   "bound": 5,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.pontons",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.plant.004",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.plant.003",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.plant.002",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.plant.001",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.lava",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.barrier",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.torch.002",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "GER.fire.002",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.wall",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.211",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.torch.001",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "GER.fire.001",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.torch",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "GER.fire",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Cylinder.010",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.plant",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "ger.spectr",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.172",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "VEG_cosmos.003",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.148",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.133",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.132",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.131",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.130",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.129",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.128",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.127",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Cos_back",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Pont_levis.007",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plan.061",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "VEG_cosmos.002",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "VEG_cosmos.001",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "VEG_cosmos",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Veg_cosmos2.1",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Veg_cosmos2",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.portal.Prairie",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Cos_back.prairie",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.013",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Pont_levis.003",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "lilypad_001.002",
+   "bodyType": 1,
+   "bound": 4,
+   "ghost": false
+  },
+  {
+   "objectName": "Cube.013",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.010",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.011",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.014",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Waterfall.001",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.normal",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.back",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Plane.016",
+   "bodyType": 0,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Cube",
+   "bodyType": 3,
+   "bound": 5,
+   "ghost": false
+  },
+  {
+   "objectName": "Icosphere.005",
+   "bodyType": 0,
+   "bound": 4,
+   "ghost": false
+  },
+  {
+   "objectName": "Cylindre.001",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.ufo",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "Ger.Ufo.opener",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "eyes_helpi.001",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "eyes_helpi",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  },
+  {
+   "objectName": "ger.helpi",
+   "bodyType": 1,
+   "bound": 0,
+   "ghost": false
+  }
+ ],
+ "references": [
+  {
+   "objectName": "ger.dale",
+   "blenderPosition": [
+    74.8776,
+    -28.3405,
+    6.6574
+   ]
+  },
+  {
+   "objectName": "ger.Under",
+   "blenderPosition": [
+    218.9799,
+    146.4641,
+    20.2275
+   ]
+  },
+  {
+   "objectName": "Ger.portal.desert1",
+   "blenderPosition": [
+    284.2656,
+    95.5144,
+    18.9729
+   ]
+  },
+  {
+   "objectName": "Cos_back.desert1",
+   "blenderPosition": [
+    284.4078,
+    95.4446,
+    19.4872
+   ]
+  },
+  {
+   "objectName": "Cos_back.under1",
+   "blenderPosition": [
+    215.8162,
+    151.1707,
+    18.9075
+   ]
+  },
+  {
+   "objectName": "Ger.portal.under1",
+   "blenderPosition": [
+    215.7551,
+    151.2329,
+    18.3764
+   ]
+  },
+  {
+   "objectName": "lilypad_001.005",
+   "blenderPosition": [
+    161.8166,
+    100.3216,
+    -0.941
+   ]
+  },
+  {
+   "objectName": "Ger.portal.Swamp1",
+   "blenderPosition": [
+    80.8672,
+    34.0923,
+    3.2909
+   ]
+  },
+  {
+   "objectName": "Cos_back.swamp1",
+   "blenderPosition": [
+    81.1189,
+    33.9457,
+    3.7262
+   ]
+  },
+  {
+   "objectName": "ger.Terio",
+   "blenderPosition": [
+    281.7388,
+    85.8157,
+    23.6255
+   ]
+  },
+  {
+   "objectName": "ger.lava",
+   "blenderPosition": [
+    -232.7294,
+    205.7175,
+    7.0377
+   ]
+  },
+  {
+   "objectName": "Ger.boat.001",
+   "blenderPosition": [
+    9.4214,
+    198.2962,
+    1.4293
+   ]
+  },
+  {
+   "objectName": "Veg_cosmos2.002",
+   "blenderPosition": [
+    42.8715,
+    105.1538,
+    35.5296
+   ]
+  },
+  {
+   "objectName": "Ger.portal.Swamp1.001",
+   "blenderPosition": [
+    84.187,
+    35.8966,
+    0.2352
+   ]
+  },
+  {
+   "objectName": "Ger.portal.Mountain",
+   "blenderPosition": [
+    -77.0891,
+    7.2737,
+    -5.5538
+   ]
+  },
+  {
+   "objectName": "ger.clim20",
+   "blenderPosition": [
+    -310.8838,
+    -147.3065,
+    7.1811
+   ]
+  },
+  {
+   "objectName": "ger.clim19",
+   "blenderPosition": [
+    -325.8592,
+    -147.3065,
+    7.1811
+   ]
+  },
+  {
+   "objectName": "ger.clim18",
+   "blenderPosition": [
+    -375.6606,
+    -130.7081,
+    5.2655
+   ]
+  },
+  {
+   "objectName": "ger.clim17",
+   "blenderPosition": [
+    -326.031,
+    -104.3088,
+    4.4138
+   ]
+  },
+  {
+   "objectName": "ger.clim16",
+   "blenderPosition": [
+    -348.9715,
+    -32.3068,
+    4.4138
+   ]
+  },
+  {
+   "objectName": "ger.clim15",
+   "blenderPosition": [
+    -348.9715,
+    99.8233,
+    4.4138
+   ]
+  },
+  {
+   "objectName": "Ruination.002",
+   "blenderPosition": [
+    -354.4044,
+    -138.2709,
+    5.3153
+   ]
+  },
+  {
+   "objectName": "Ger.terio",
+   "blenderPosition": [
+    -341.9194,
+    126.8951,
+    -3.442
+   ]
+  },
+  {
+   "objectName": "Ger.space.Fence",
+   "blenderPosition": [
+    -364.659,
+    4.0382,
+    25.3208
+   ]
+  },
+  {
+   "objectName": "Empty_purple_clim.013",
+   "blenderPosition": [
+    -334.469,
+    140.276,
+    2.9659
+   ]
+  },
+  {
+   "objectName": "Ger.backSpa",
+   "blenderPosition": [
+    0.0376,
+    -0.7492,
+    5.4159
+   ]
+  },
+  {
+   "objectName": "Empty_purple_clim.010",
+   "blenderPosition": [
+    -279.7786,
+    174.3744,
+    2.9659
+   ]
+  },
+  {
+   "objectName": "Sound_Field.006",
+   "blenderPosition": [
+    -355.8823,
+    43.6921,
+    2.4803
+   ]
+  },
+  {
+   "objectName": "ger.clim14",
+   "blenderPosition": [
+    -229.1556,
+    225.0021,
+    12.5311
+   ]
+  },
+  {
+   "objectName": "ger.clim13",
+   "blenderPosition": [
+    -32.7463,
+    181.3794,
+    1.4943
+   ]
+  },
+  {
+   "objectName": "ger.clim12",
+   "blenderPosition": [
+    155.254,
+    182.7711,
+    1.8737
+   ]
+  },
+  {
+   "objectName": "ger.clim11",
+   "blenderPosition": [
+    284.6206,
+    116.3276,
+    21.4242
+   ]
+  },
+  {
+   "objectName": "ger.clim10",
+   "blenderPosition": [
+    210.657,
+    110.1829,
+    21.4242
+   ]
+  },
+  {
+   "objectName": "ger.clim9",
+   "blenderPosition": [
+    125.8109,
+    119.2936,
+    2.9637
+   ]
+  },
+  {
+   "objectName": "ger.clim8",
+   "blenderPosition": [
+    46.2463,
+    84.9259,
+    2.9637
+   ]
+  },
+  {
+   "objectName": "ger.clim7",
+   "blenderPosition": [
+    123.4181,
+    26.5027,
+    2.9637
+   ]
+  },
+  {
+   "objectName": "ger.clim6",
+   "blenderPosition": [
+    46.0028,
+    -70.1055,
+    2.9637
+   ]
+  },
+  {
+   "objectName": "ger.clim5",
+   "blenderPosition": [
+    23.7535,
+    -38.0737,
+    2.9637
+   ]
+  },
+  {
+   "objectName": "ger.clim4",
+   "blenderPosition": [
+    -72.5394,
+    -0.5729,
+    8.197
+   ]
+  },
+  {
+   "objectName": "ger.clim3",
+   "blenderPosition": [
+    -26.0173,
+    -27.694,
+    3.1768
+   ]
+  },
+  {
+   "objectName": "ger.clim2",
+   "blenderPosition": [
+    14.8736,
+    3.8534,
+    3.1768
+   ]
+  },
+  {
+   "objectName": "ger.clim1",
+   "blenderPosition": [
+    -1.3337,
+    27.2933,
+    3.1768
+   ]
+  },
+  {
+   "objectName": "Ger.space",
+   "blenderPosition": [
+    -341.9194,
+    126.8951,
+    -3.442
+   ]
+  },
+  {
+   "objectName": "Ger.box",
+   "blenderPosition": [
+    191.9218,
+    113.3631,
+    3.933
+   ]
+  },
+  {
+   "objectName": "Ger.protect.elect",
+   "blenderPosition": [
+    15.0423,
+    0.0,
+    1.878
+   ]
+  },
+  {
+   "objectName": "Ger.boat",
+   "blenderPosition": [
+    -36.908,
+    169.3493,
+    1.5699
+   ]
+  },
+  {
+   "objectName": "Ger.pontons",
+   "blenderPosition": [
+    -8.9371,
+    167.6206,
+    -0.3825
+   ]
+  },
+  {
+   "objectName": "Ger.plant.004",
+   "blenderPosition": [
+    279.8791,
+    132.2124,
+    21.9581
+   ]
+  },
+  {
+   "objectName": "Ger.plant.003",
+   "blenderPosition": [
+    227.3033,
+    82.7703,
+    25.007
+   ]
+  },
+  {
+   "objectName": "Ger.plant.002",
+   "blenderPosition": [
+    216.2534,
+    100.0234,
+    21.9963
+   ]
+  },
+  {
+   "objectName": "Ger.plant.001",
+   "blenderPosition": [
+    203.1246,
+    84.4884,
+    35.5187
+   ]
+  },
+  {
+   "objectName": "Ger.lava",
+   "blenderPosition": [
+    248.5,
+    89.5994,
+    15.0125
+   ]
+  },
+  {
+   "objectName": "Ger.barrier",
+   "blenderPosition": [
+    15.0423,
+    0.0,
+    1.878
+   ]
+  },
+  {
+   "objectName": "Ger.torch.002",
+   "blenderPosition": [
+    120.0241,
+    114.3742,
+    6.9001
+   ]
+  },
+  {
+   "objectName": "Sound_Field.005",
+   "blenderPosition": [
+    76.5504,
+    108.5219,
+    3.3659
+   ]
+  },
+  {
+   "objectName": "Sound_Field.004",
+   "blenderPosition": [
+    220.2042,
+    189.627,
+    -1.407
+   ]
+  },
+  {
+   "objectName": "Ger.wall",
+   "blenderPosition": [
+    54.3786,
+    73.2364,
+    29.1542
+   ]
+  },
+  {
+   "objectName": "Plane.211",
+   "blenderPosition": [
+    -74.6233,
+    80.4382,
+    8.7222
+   ]
+  },
+  {
+   "objectName": "Ger.torch.001",
+   "blenderPosition": [
+    32.8454,
+    76.533,
+    6.9795
+   ]
+  },
+  {
+   "objectName": "Ger.torch",
+   "blenderPosition": [
+    57.6373,
+    76.533,
+    6.9795
+   ]
+  },
+  {
+   "objectName": "Cylinder.010",
+   "blenderPosition": [
+    -8.5602,
+    -0.0377,
+    168.2831
+   ]
+  },
+  {
+   "objectName": "Ger.plant",
+   "blenderPosition": [
+    25.9126,
+    -49.5068,
+    31.2484
+   ]
+  },
+  {
+   "objectName": "ger.spectr",
+   "blenderPosition": [
+    15.0423,
+    0.0,
+    1.878
+   ]
+  },
+  {
+   "objectName": "ger.Swp1",
+   "blenderPosition": [
+    75.7023,
+    29.748,
+    5.2904
+   ]
+  },
+  {
+   "objectName": "ger.Prison",
+   "blenderPosition": [
+    -32.2475,
+    4.6377,
+    5.2904
+   ]
+  },
+  {
+   "objectName": "ger.Prairie",
+   "blenderPosition": [
+    -14.1188,
+    47.4427,
+    5.2904
+   ]
+  },
+  {
+   "objectName": "Sound_Field.003",
+   "blenderPosition": [
+    -108.1496,
+    239.5809,
+    1.6932
+   ]
+  },
+  {
+   "objectName": "ger.Beach",
+   "blenderPosition": [
+    -32.2584,
+    39.5041,
+    8.2204
+   ]
+  },
+  {
+   "objectName": "Plane.172",
+   "blenderPosition": [
+    -9.5034,
+    -32.9099,
+    1.8788
+   ]
+  },
+  {
+   "objectName": "Red_clim.007",
+   "blenderPosition": [
+    3.4519,
+    38.0949,
+    3.2691
+   ]
+  },
+  {
+   "objectName": "Red_clim.006",
+   "blenderPosition": [
+    -6.3267,
+    38.141,
+    3.3054
+   ]
+  },
+  {
+   "objectName": "VEG_cosmos.003",
+   "blenderPosition": [
+    56.1439,
+    26.3696,
+    3.4096
+   ]
+  },
+  {
+   "objectName": "Display_cin_prison",
+   "blenderPosition": [
+    -11.7573,
+    1.4134,
+    -0.0562
+   ]
+  },
+  {
+   "objectName": "Plane.148",
+   "blenderPosition": [
+    45.5375,
+    55.2894,
+    1.8788
+   ]
+  },
+  {
+   "objectName": "BlueClim8",
+   "blenderPosition": [
+    -30.4417,
+    -45.0652,
+    3.4077
+   ]
+  },
+  {
+   "objectName": "Power_ger",
+   "blenderPosition": [
+    36.7758,
+    41.6091,
+    18.4564
+   ]
+  },
+  {
+   "objectName": "Plane.133",
+   "blenderPosition": [
+    120.1016,
+    37.276,
+    1.8276
+   ]
+  },
+  {
+   "objectName": "Plane.132",
+   "blenderPosition": [
+    119.7514,
+    75.3326,
+    1.8276
+   ]
+  },
+  {
+   "objectName": "Plane.131",
+   "blenderPosition": [
+    106.4652,
+    60.759,
+    1.8276
+   ]
+  },
+  {
+   "objectName": "Plane.130",
+   "blenderPosition": [
+    131.6548,
+    49.9486,
+    1.8276
+   ]
+  },
+  {
+   "objectName": "Plane.129",
+   "blenderPosition": [
+    134.5464,
+    64.2296,
+    1.8276
+   ]
+  },
+  {
+   "objectName": "Plane.128",
+   "blenderPosition": [
+    121.5924,
+    64.2296,
+    1.8276
+   ]
+  },
+  {
+   "objectName": "Plane.127",
+   "blenderPosition": [
+    101.2353,
+    30.6481,
+    1.8276
+   ]
+  },
+  {
+   "objectName": "Empty_purple_clim",
+   "blenderPosition": [
+    59.1086,
+    32.5483,
+    3.0009
+   ]
+  },
+  {
+   "objectName": "Sound_Field.002",
+   "blenderPosition": [
+    127.8389,
+    30.4864,
+    1.6932
+   ]
+  },
+  {
+   "objectName": "Cos_back",
+   "blenderPosition": [
+    21.1874,
+    41.6212,
+    7.3802
+   ]
+  },
+  {
+   "objectName": "Sound_Field.001",
+   "blenderPosition": [
+    8.0763,
+    -15.5548,
+    5.0822
+   ]
+  },
+  {
+   "objectName": "Sound_FieldSwamp",
+   "blenderPosition": [
+    82.7705,
+    -1.1955,
+    55.3742
+   ]
+  },
+  {
+   "objectName": "Pont_levis.007",
+   "blenderPosition": [
+    181.528,
+    115.5824,
+    1.8884
+   ]
+  },
+  {
+   "objectName": "Plan.061",
+   "blenderPosition": [
+    250.9497,
+    3.5833,
+    -1.1878
+   ]
+  },
+  {
+   "objectName": "VEG_cosmos.002",
+   "blenderPosition": [
+    -5.6292,
+    32.0592,
+    3.7074
+   ]
+  },
+  {
+   "objectName": "VEG_cosmos.001",
+   "blenderPosition": [
+    11.2684,
+    -36.8067,
+    3.7074
+   ]
+  },
+  {
+   "objectName": "VEG_cosmos",
+   "blenderPosition": [
+    -19.7258,
+    0.0,
+    3.7074
+   ]
+  },
+  {
+   "objectName": "Veg_cosmos2.1",
+   "blenderPosition": [
+    -34.8184,
+    -16.3617,
+    24.9568
+   ]
+  },
+  {
+   "objectName": "Veg_cosmos2",
+   "blenderPosition": [
+    -32.5707,
+    12.8143,
+    25.7328
+   ]
+  },
+  {
+   "objectName": "Ger.portal.Prairie",
+   "blenderPosition": [
+    -0.385,
+    46.758,
+    3.4471
+   ]
+  },
+  {
+   "objectName": "Cos_back.prairie",
+   "blenderPosition": [
+    -0.315,
+    46.2687,
+    3.6224
+   ]
+  },
+  {
+   "objectName": "Plane.013",
+   "blenderPosition": [
+    -20.0388,
+    -17.3153,
+    -15.3893
+   ]
+  },
+  {
+   "objectName": "Pont_levis.003",
+   "blenderPosition": [
+    55.0655,
+    -1.3352,
+    1.8884
+   ]
+  },
+  {
+   "objectName": "lilypad_001.002",
+   "blenderPosition": [
+    144.2292,
+    56.6114,
+    -0.941
+   ]
+  },
+  {
+   "objectName": "empty_waterfall",
+   "blenderPosition": [
+    2.113,
+    -35.0793,
+    -0.7959
+   ]
+  },
+  {
+   "objectName": "Cube.013",
+   "blenderPosition": [
+    16.7885,
+    3.8227,
+    1.8804
+   ]
+  },
+  {
+   "objectName": "Plane.010",
+   "blenderPosition": [
+    -1.4823,
+    -26.9225,
+    1.1572
+   ]
+  },
+  {
+   "objectName": "Plane.011",
+   "blenderPosition": [
+    -3.6421,
+    -23.9264,
+    0.1401
+   ]
+  },
+  {
+   "objectName": "Plane.014",
+   "blenderPosition": [
+    -7.3059,
+    -24.5497,
+    0.0089
+   ]
+  },
+  {
+   "objectName": "Waterfall.001",
+   "blenderPosition": [
+    -2.4917,
+    -31.0446,
+    5.5085
+   ]
+  },
+  {
+   "objectName": "Ger.normal",
+   "blenderPosition": [
+    15.0423,
+    0.0,
+    1.878
+   ]
+  },
+  {
+   "objectName": "Ger.back",
+   "blenderPosition": [
+    0.0376,
+    -0.7492,
+    5.4159
+   ]
+  },
+  {
+   "objectName": "Plane.016",
+   "blenderPosition": [
+    -9.8279,
+    -24.4813,
+    1.8812
+   ]
+  },
+  {
+   "objectName": "Cube",
+   "blenderPosition": [
+    18.1488,
+    39.841,
+    5.2193
+   ]
+  },
+  {
+   "objectName": "Ger.spot",
+   "blenderPosition": [
+    -7.9104,
+    -79.0458,
+    60.3204
+   ]
+  },
+  {
+   "objectName": "Ger.cam",
+   "blenderPosition": [
+    -49.1043,
+    0.7945,
+    7.6337
+   ]
+  },
+  {
+   "objectName": "Cylindre.001",
+   "blenderPosition": [
+    21.1036,
+    41.745,
+    3.5356
+   ]
+  },
+  {
+   "objectName": "Ger.ufo",
+   "blenderPosition": [
+    -90.69,
+    -2.1828,
+    6.6763
+   ]
+  },
+  {
+   "objectName": "eyes_helpi.001",
+   "blenderPosition": [
+    -11.6109,
+    -4.7049,
+    11.8284
+   ]
+  },
+  {
+   "objectName": "eyes_helpi",
+   "blenderPosition": [
+    -11.6109,
+    4.9981,
+    11.7207
+   ]
+  },
+  {
+   "objectName": "ger.helpi",
+   "blenderPosition": [
+    58.0067,
+    -43.1743,
+    4.4724
+   ]
+  }
+ ],
+ "climSpin": [
+  2.094,
+  -3.144,
+  3.144
+ ]
+}

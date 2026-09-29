@@ -1,0 +1,24 @@
+{
+ "entries": [
+  {
+   "key": "ps.Title",
+   "value": "Pause Menu"
+  },
+  {
+   "key": "ps.Cart",
+   "value": "Map of world"
+  },
+  {
+   "key": "ps.Option",
+   "value": "Options"
+  },
+  {
+   "key": "ps.RetGer",
+   "value": "Go to Ger"
+  },
+  {
+   "key": "ps.Exit",
+   "value": "Exit to the menu"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "entries": [
+  {
+   "key": "hud.pause.txt1",
+   "value": "Back to the game"
+  },
+  {
+   "key": "hud.pause.txt2",
+   "value": "World map"
+  },
+  {
+   "key": "hud.pause.txt3",
+   "value": "Help"
+  },
+  {
+   "key": "hud.pause.txt4",
+   "value": "Save and exit"
+  }
+ ]
+}

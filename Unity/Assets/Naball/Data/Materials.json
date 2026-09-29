@@ -1,0 +1,970 @@
+{
+ "materials": [
+  {
+   "name": "Arial_planet",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "arial_ele.png",
+   "tiling": [
+    2.0,
+    2.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Arialian",
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "alpha": 1.0,
+   "emission": 0.1,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Bacground_terio",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 2.0,
+   "shadeless": false,
+   "transparent": false,
+   "albedo": "terio_sky.jpg",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Black",
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "alpha": 1.0,
+   "emission": 2.0,
+   "shadeless": false,
+   "transparent": false,
+   "albedo": "",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Box_terioriams",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.03,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "BoxNormal.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Color_red_Shade_TR=3",
+   "color": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "alpha": 0.3,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Eyes_goladia",
+   "color": [
+    1.0,
+    0.0125,
+    0.0
+   ],
+   "alpha": 0.0,
+   "emission": 2.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Eyes_terioriams.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Fire",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "fire.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Flash",
+   "color": [
+    0.8,
+    0.1362,
+    0.0
+   ],
+   "alpha": 0.0,
+   "emission": 2.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Ray_cosmos01.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Machine",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.084,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Machine_activate.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Material.003",
+   "color": [
+    0.0,
+    0.8,
+    0.0525
+   ],
+   "alpha": 0.0,
+   "emission": 2.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "PCG_spacetime.png",
+   "tiling": [
+    20.0,
+    20.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Material.020",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.1,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "floor_terioriams.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Material.021",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.08,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "grass_main.jpg",
+   "tiling": [
+    20.0,
+    20.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Material.022",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "fx_splash.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Material.023",
+   "color": [
+    0.0063,
+    0.008,
+    0.08
+   ],
+   "alpha": 0.8,
+   "emission": 2.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "background_stars.png",
+   "tiling": [
+    3.0,
+    3.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "UV_water_main.jpg",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Material.031",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "plant01_alpha.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Material.035",
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "alpha": 1.0,
+   "emission": 0.05,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Pack_texture_Naball_default.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Matériau",
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "alpha": 1.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "background_stars.png",
+   "tiling": [
+    5.0,
+    5.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Matériau.002",
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "alpha": 0.0,
+   "emission": 0.0,
+   "shadeless": false,
+   "transparent": false,
+   "albedo": "bridge_terioriams.png",
+   "tiling": [
+    3.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Matériau.009",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "rope_main.jpg",
+   "tiling": [
+    100.0,
+    -0.2368
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Matériau.013",
+   "color": [
+    0.8829,
+    0.8829,
+    0.8829
+   ],
+   "alpha": 1.0,
+   "emission": 0.03,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "rock_main.jpg",
+   "tiling": [
+    10.0,
+    10.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Matériau.014",
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "alpha": 1.0,
+   "emission": 2.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "background_stars.png",
+   "tiling": [
+    10.0,
+    10.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Matériau.016",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "Machine.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Matériau.025",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.08,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "grass_main.jpg",
+   "tiling": [
+    10.0,
+    10.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Mercure",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Moon_surf.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Power_dale.002",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.09,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Power_dale.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Power_yellow.009",
+   "color": [
+    0.0,
+    0.4071,
+    1.0
+   ],
+   "alpha": 0.0,
+   "emission": 1.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Power1_yellow.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Red",
+   "color": [
+    0.0452,
+    0.0437,
+    0.0382
+   ],
+   "alpha": 1.0,
+   "emission": 0.04,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Class_0_tex.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Red.001",
+   "color": [
+    0.0452,
+    0.0437,
+    0.0382
+   ],
+   "alpha": 1.0,
+   "emission": 0.02,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Class_0_tex.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Red.002",
+   "color": [
+    0.1376,
+    0.0,
+    0.0
+   ],
+   "alpha": 1.0,
+   "emission": 0.04,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Class_0_tex.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Rock_ice",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.2,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "rock_main.jpg",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "normal-map-copy.jpg",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Rock_normal",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.7706,
+   "emission": 0.01,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "rock_main.jpg",
+   "tiling": [
+    3.0,
+    3.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "normal-map-copy.jpg",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Sand_alpha",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.02,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "sand_alpha.jpg",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "VEG_cosmos",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.05,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "Veg_cosmo.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Veg_cosmo2",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "Veg_cosmo2.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Veg_cosmos3",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "Veg_cosmo3.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "Vortex",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "vortex.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "WaterFall.002",
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "alpha": 0.4447,
+   "emission": 0.08,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "UV_water_main.jpg",
+   "tiling": [
+    0.2,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "Wood_terioriams",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 0.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "wood_main.jpg",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "center.002",
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "alpha": 0.2,
+   "emission": 1.0,
+   "shadeless": true,
+   "transparent": false,
+   "albedo": "",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  },
+  {
+   "name": "effect_laser",
+   "color": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "alpha": 0.0,
+   "emission": 0.0,
+   "shadeless": true,
+   "transparent": true,
+   "albedo": "effect_lase.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": true
+  },
+  {
+   "name": "lava_alpha",
+   "color": [
+    0.7334,
+    0.7498,
+    0.8
+   ],
+   "alpha": 1.0,
+   "emission": 2.0,
+   "shadeless": false,
+   "transparent": true,
+   "albedo": "Lava.png",
+   "tiling": [
+    1.0,
+    1.0
+   ],
+   "offset": [
+    0.0,
+    0.0
+   ],
+   "normalMap": "",
+   "alphaFromTexture": false
+  }
+ ]
+}

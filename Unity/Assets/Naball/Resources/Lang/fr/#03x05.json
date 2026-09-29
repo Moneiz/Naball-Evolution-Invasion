@@ -1,0 +1,12 @@
+{
+ "lines": [
+  {
+   "color": "O",
+   "text": "Tu peux faire tourner la caméra autour de toi."
+  },
+  {
+   "color": "O",
+   "text": "Pour celà, presse A pour qu'elle tourne vers la gauche et Z pour la droite."
+  }
+ ]
+}

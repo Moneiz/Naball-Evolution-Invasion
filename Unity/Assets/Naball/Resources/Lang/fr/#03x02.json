@@ -1,0 +1,20 @@
+{
+ "lines": [
+  {
+   "color": "O",
+   "text": "Tu viens d'obtenir le pouvoir de l'Eta."
+  },
+  {
+   "color": "O",
+   "text": "Grâce à ce pouvoir, tu pourras tirer des boules magiques sur des ennemis, des cibles, des cages..."
+  },
+  {
+   "color": "O",
+   "text": "En t'approchant de ces objets, tu passeras automatiquement en mode combat et tes tirs seront ciblés."
+  },
+  {
+   "color": "O",
+   "text": "Ensuite, pour tirer, presse la touche C."
+  }
+ ]
+}
